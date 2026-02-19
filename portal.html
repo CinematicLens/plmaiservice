@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Client Portal – PLM Ops Studio</title>
+  <meta name="description" content="Client portal: submit a service request."/>
+  <link rel="stylesheet" href="assets/styles.css"/>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">PLM Ops Studio</a>
+      <nav class="nav-links">
+        <a data-nav href="plm-ops.html">PLM Ops</a>
+        <a data-nav href="services.html">All Services</a>
+        <a data-nav href="delivery.html">How Delivery Works</a>
+        <a data-nav href="pricing.html">Pricing</a>
+        <a data-nav href="trust.html">Trust</a>
+        <a data-nav href="portal.html">Client Portal</a>
+      </nav>
+      <div class="cta">
+        <a class="btn" href="services.html">View PLM Services</a>
+        <a class="btn primary" href="portal.html">Start 1 Free PLM Task</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    
+<section class="hero">
+  <h1 class="h-title" style="font-size:34px">PLM Ops – Service Request Portal</h1>
+  <p class="h-sub">Select the right category and describe your issue clearly. No login required.</p>
+</section>
+
+<div class="card">
+  <form id="requestForm" class="form">
+    <div class="row">
+      <div>
+        <div class="label">Service Area</div>
+        <select class="input" name="serviceArea" required>
+          <option value="PLM Ops">PLM Ops</option>
+          <option value="Teamcenter">PLM – Teamcenter</option>
+          <option value="Active Workspace">PLM – Active Workspace (AWC)</option>
+          <option value="T4S">PLM – T4S (Teamcenter ↔ SAP)</option>
+          <option value="T4EA">PLM – T4EA</option>
+          <option value="T4ST">PLM – T4ST</option>
+          <option value="Action Handler">Teamcenter – Action Handler</option>
+          <option value="SOA">Teamcenter – SOA / REST</option>
+          <option value="Android App Development">Android App Development</option>
+          <option value="Web Development">Web Development</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+      <div>
+        <div class="label">Problem Type</div>
+        <select class="input" name="problemType">
+          <option value="">(optional)</option>
+          <option>Installation / Upgrade</option>
+          <option>Configuration / Mapping</option>
+          <option>Error / Troubleshooting</option>
+          <option>Performance</option>
+          <option>Automation / Scripting</option>
+          <option>Customization</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="label">Your Email</div>
+        <input class="input" type="email" name="email" placeholder="your.email@company.com" required />
+      </div>
+      <div>
+        <div class="label">Phone / WhatsApp (optional)</div>
+        <input class="input" type="tel" name="phone" placeholder="+91 / +49 / +1 ..." />
+      </div>
+    </div>
+
+    <div>
+      <div class="label">Describe the problem</div>
+      <textarea class="input" name="message" placeholder="Versions (TC/AWC/T4x), steps to reproduce, errors/logs, expected vs actual behavior..." required></textarea>
+    </div>
+
+    <div class="notice">
+      This static site has no database. By default, Submit opens an email draft. If you later add a form endpoint (Formspree/Netlify), it can submit without email client.
+    </div>
+
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+      <button id="submitBtn" class="btn primary" type="submit">Submit Request</button>
+      <span id="formStatus" style="color:var(--muted);font-size:13px"></span>
+    </div>
+  </form>
+</div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div>© 2026 PLM Ops Studio</div>
+      <div>Contact: teamcentersap@gmail.com</div>
+    </div>
+  </footer>
+
+  <script src="assets/config.js"></script>
+  <script src="assets/main.js"></script>
+</body>
+</html>
