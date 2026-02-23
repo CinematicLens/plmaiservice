@@ -13,6 +13,7 @@
       <a class="brand" href="index.html">PLM Ops Studio</a>
       <nav class="nav-links">
         <a data-nav href="plm-ops.html">PLM Ops</a>
+        <a data-nav href="agents.html">AI Agents</a>
         <a data-nav href="services.html">All Services</a>
         <a data-nav href="delivery.html">How Delivery Works</a>
         <a data-nav href="pricing.html">Pricing</a>
@@ -29,41 +30,102 @@
   <main class="container">
     
 <section class="hero">
-  <h1 class="h-title" style="font-size:34px">PLM Ops – Service Request Portal</h1>
-  <p class="h-sub">Select the right category and describe your issue clearly. No login required.</p>
+  <h1 class="h-title" style="font-size:34px">PLM Ops – AI Triage Intake</h1>
+  <p class="h-sub">Submit an incident or change request and get a structured triage report (probable causes, next checks, required inputs, and effort band). No login required.</p>
 </section>
 
 <div class="card">
+  
   <form id="requestForm" class="form">
+    <div class="row">
+      <div>
+        <div class="label">Request Type</div>
+        <select class="input" name="requestType" required>
+          <option value="Incident Triage">Incident Triage (errors / failures)</option>
+          <option value="Change Request">Change Request (feature / enhancement)</option>
+          <option value="Quote / Estimate">Quote / Estimate</option>
+          <option value="Advisory">Advisory / Architecture</option>
+        </select>
+      </div>
+      <div>
+        <div class="label">Severity</div>
+        <select class="input" name="severity" required>
+          <option value="S1 - Production down">S1 - Production down</option>
+          <option value="S2 - Major impact">S2 - Major impact</option>
+          <option value="S3 - Normal">S3 - Normal</option>
+          <option value="S4 - Low">S4 - Low</option>
+        </select>
+      </div>
+    </div>
+
     <div class="row">
       <div>
         <div class="label">Service Area</div>
         <select class="input" name="serviceArea" required>
-          <option value="PLM Ops">PLM Ops</option>
-          <option value="Teamcenter">PLM – Teamcenter</option>
-          <option value="Active Workspace">PLM – Active Workspace (AWC)</option>
-          <option value="T4S">PLM – T4S (Teamcenter ↔ SAP)</option>
-          <option value="T4EA">PLM – T4EA</option>
-          <option value="T4ST">PLM – T4ST</option>
-          <option value="Action Handler">Teamcenter – Action Handler</option>
-          <option value="SOA">Teamcenter – SOA / REST</option>
-          <option value="Android App Development">Android App Development</option>
-          <option value="Web Development">Web Development</option>
+          <option value="Teamcenter">Teamcenter (Core / Workflow / BMIDE)</option>
+          <option value="Active Workspace">Active Workspace (AWC) – UI / Panels / Commands</option>
+          <option value="T4S">T4S (Teamcenter ↔ SAP)</option>
+          <option value="T4EA">T4EA</option>
+          <option value="T4ST">T4ST</option>
+          <option value="CN4T / Opcenter">CN4T / Opcenter</option>
+          <option value="Performance / Ops">Performance / Ops</option>
           <option value="Other">Other</option>
         </select>
       </div>
       <div>
         <div class="label">Problem Type</div>
-        <select class="input" name="problemType">
-          <option value="">(optional)</option>
+        <select class="input" name="problemType" required>
           <option>Installation / Upgrade</option>
           <option>Configuration / Mapping</option>
           <option>Error / Troubleshooting</option>
           <option>Performance</option>
           <option>Automation / Scripting</option>
           <option>Customization</option>
+          <option>Data / Naming / Duplicates</option>
           <option>Other</option>
         </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="label">Environment</div>
+        <select class="input" name="environment" required>
+          <option value="Production">Production</option>
+          <option value="Test / QA">Test / QA</option>
+          <option value="Dev">Dev</option>
+        </select>
+      </div>
+      <div>
+        <div class="label">OS / Platform</div>
+        <select class="input" name="platform" required>
+          <option value="Linux">Linux</option>
+          <option value="Windows">Windows</option>
+          <option value="Mixed">Mixed</option>
+          <option value="Unknown">Unknown</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="label">Teamcenter Version (optional)</div>
+        <input class="input" name="tcVersion" placeholder="e.g., TC 14.3 / 2312 / 2406" />
+      </div>
+      <div>
+        <div class="label">AWC Version (optional)</div>
+        <input class="input" name="awcVersion" placeholder="e.g., AWC 2506" />
+      </div>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="label">T4x Version (optional)</div>
+        <input class="input" name="t4xVersion" placeholder="e.g., T4S 15.x / T4ST ..." />
+      </div>
+      <div>
+        <div class="label">Module / Area (optional)</div>
+        <input class="input" name="moduleArea" placeholder="e.g., Release workflow, mapping namespace, custom module name" />
       </div>
     </div>
 
@@ -79,19 +141,48 @@
     </div>
 
     <div>
-      <div class="label">Describe the problem</div>
-      <textarea class="input" name="message" placeholder="Versions (TC/AWC/T4x), steps to reproduce, errors/logs, expected vs actual behavior..." required></textarea>
+      <div class="label">Issue Summary (1–2 lines)</div>
+      <input class="input" name="summary" placeholder="e.g., T4S transfer aborts: PROD_HIERARCHY mandatory missing" required />
+    </div>
+
+    <div>
+      <div class="label">Details (paste errors/logs + steps)</div>
+      <textarea class="input" name="message" placeholder="Include: steps, exact error text, log snippet, object types, expected vs actual. The more concrete, the faster triage." required></textarea>
+    </div>
+
+    <div class="row">
+      <div>
+        <div class="label">Business Impact (optional)</div>
+        <input class="input" name="impact" placeholder="e.g., 120 users blocked / release deadline today" />
+      </div>
+      <div>
+        <div class="label">Preferred Response Window</div>
+        <select class="input" name="responseWindow" required>
+          <option value="24–72h (standard)">24–72h (standard)</option>
+          <option value="Same day (best effort)">Same day (best effort)</option>
+          <option value="Scheduled call">Scheduled call</option>
+        </select>
+      </div>
     </div>
 
     <div class="notice">
-      This static site has no database. By default, Submit opens an email draft. If you later add a form endpoint (Formspree/Netlify), it can submit without email client.
+      <b>Attachments:</b> If you need to share files (logs, screenshots, configs), mention it in the details. We will reply with a secure sharing option if needed.<br/>
+      <b>Privacy:</b> Please mask passwords/tokens. Avoid uploading sensitive personal data.
     </div>
 
+    <label style="display:flex;gap:10px;align-items:flex-start">
+      <input type="checkbox" name="consent" required style="margin-top:4px"/>
+      <span style="font-size:13px;color:var(--muted)">
+        I confirm I have removed secrets/passwords and I agree to be contacted about this request.
+      </span>
+    </label>
+
     <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-      <button id="submitBtn" class="btn primary" type="submit">Submit Request</button>
+      <button id="submitBtn" class="btn primary" type="submit">Generate Triage Email</button>
       <span id="formStatus" style="color:var(--muted);font-size:13px"></span>
     </div>
   </form>
+
 </div>
 
   </main>
@@ -99,7 +190,7 @@
   <footer class="footer">
     <div class="container">
       <div>© 2026 PLM Ops Studio</div>
-      <div>Contact: teamcentersap@gmail.com</div>
+      <div>Contact: teamcentersap@gmail.com • For urgent incidents: use Client Portal</div>
     </div>
   </footer>
 

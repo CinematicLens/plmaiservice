@@ -47,15 +47,33 @@
   });
 
   function openMailto(to, data){
-    const subject = `[PLM Ops] ${data.serviceArea || 'Service Request'} – ${data.problemType || 'General'}`;
+    const subject = `[PLM Ops] ${data.requestType || data.serviceArea || 'Service Request'} – ${data.summary || data.problemType || 'General'}`;
     const body =
-`Service Area: ${data.serviceArea || '-'}
+`Request Type: ${data.requestType || '-'}
+Severity: ${data.severity || '-'}
+Service Area: ${data.serviceArea || '-'}
 Problem Type: ${data.problemType || '-'}
 
+Environment: ${data.environment || '-'}
+OS / Platform: ${data.platform || '-'}
+Teamcenter Version: ${data.tcVersion || '-'}
+AWC Version: ${data.awcVersion || '-'}
+T4x Version: ${data.t4xVersion || '-'}
+Module / Area: ${data.moduleArea || '-'}
+
 Customer Email: ${data.email || '-'}
+Phone / WhatsApp: ${data.phone || '-'}
+
+Summary:
+${data.summary || '-'}
 
 Details:
 ${data.message || ''}
+
+Business Impact: ${data.impact || '-'}
+Preferred Response Window: ${data.responseWindow || '-'}
+
+Consent: ${data.consent ? 'Yes' : 'No'}
 
 ---
 Sent from PLM Ops Studio portal`;
