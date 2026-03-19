@@ -1,14 +1,14 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>PLM Client Portal – Submit your request | PLM Ops Studio</title>
-  <meta name="description" content="Submit your PLM request: Teamcenter, AWC, T4x triage and delivery. 1M+ PLM operations. No login. Get triage in 24–72h."/>
-  <meta name="keywords" content="PLM portal, submit PLM request, Teamcenter support request, PLM triage, PLM intake"/>
+  <title>PLM Client Portal – Submit your request | PLM AI Service</title>
+  <meta name="description" content="Submit your PLM request for Teamcenter, AWC, and T4x support. 1M+ PLM operations. No login. Get a response in 24–72h."/>
+  <meta name="keywords" content="PLM portal, submit PLM request, Teamcenter support request, PLM intake, PLM support"/>
   <link rel="canonical" href="https://plmaiservice.com/portal.html"/>
-  <meta property="og:title" content="PLM Client Portal | PLM Ops Studio"/>
-  <meta property="og:description" content="Submit PLM request. 1M+ PLM operations. Triage in 24–72h."/>
+  <meta property="og:title" content="PLM Client Portal | PLM AI Service"/>
+  <meta property="og:description" content="Submit PLM request. 1M+ PLM operations. Response in 24–72h."/>
   <meta property="og:url" content="https://plmaiservice.com/portal.html"/>
   <link rel="stylesheet" href="assets/styles.css"/>
 <!-- Google tag (gtag.js) -->
@@ -23,18 +23,13 @@
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <a class="brand" href="index.html">PLM Ops Studio</a>
+      <a class="brand" href="index.html">PLM AI Service</a>
       <nav class="nav-links">
-        <a data-nav href="plm-ops.html">PLM Ops</a>
-        <a data-nav href="agents.html">AI Agents</a>
-        <a data-nav href="industries.html">Industries</a>
-        <a data-nav href="services.html">Services</a>
         <a data-nav href="products.html">Products</a>
+        <a data-nav href="services.html">Services</a>
+        <a data-nav href="industries.html">Industries</a>
         <a data-nav href="about.html">Company</a>
-        <a data-nav href="delivery.html">Delivery</a>
-        <a data-nav href="pricing.html">Pricing</a>
-        <a data-nav href="trust.html">Trust</a>
-        <a data-nav href="portal.html">Client Portal</a>
+        <a data-nav href="contact.html">Contact</a>
       </nav>
       <div class="cta">
         <a class="btn primary" href="portal.html">Open Client Portal</a>
@@ -45,9 +40,9 @@
   <main class="container">
     
     <section class="hero hero-compact">
-      <h1 class="h-title" style="font-size:34px">PLM Ops – AI Triage Intake</h1>
+      <h1 class="h-title" style="font-size:34px">PLM &amp; SAP Support – Request Intake</h1>
       <p class="h-sub">
-        Submit an incident or change request and get a structured triage report (probable causes, next checks, required inputs, and effort band). No login required.
+        Submit an incident or change request and get a structured response (questions, next checks, required inputs, and effort band). No login required.
       </p>
       <div class="cta" style="justify-content:flex-start">
         <a class="btn" href="agents.html">Learn about AI Agents</a>
@@ -57,7 +52,7 @@
 
     <h2 class="section-title">What happens after you submit</h2>
     <p class="section-sub">
-      Once you send this form, we prepare a triage report and reply by email with next steps and a suggested effort band.
+      Once you send this form, we reply by email with next steps and a suggested effort band.
     </p>
 
     <div class="grid" style="margin-bottom:18px">
@@ -66,8 +61,8 @@
         <p>We review your description, logs, and context from this form.</p>
       </div>
       <div class="card" style="grid-column:span 4">
-        <h3>2) Triage report</h3>
-        <p>Structured output: probable causes, next checks, and required inputs.</p>
+        <h3>2) Response</h3>
+        <p>Clear output: next checks, required inputs, and likely causes where possible.</p>
       </div>
       <div class="card" style="grid-column:span 4">
         <h3>3) Plan & quote</h3>
@@ -82,7 +77,7 @@
       <div>
         <div class="label">Request Type</div>
         <select class="input" name="requestType" required>
-          <option value="Incident Triage">Incident Triage (errors / failures)</option>
+          <option value="Incident">Incident (errors / failures)</option>
           <option value="Change Request">Change Request (feature / enhancement)</option>
           <option value="Quote / Estimate">Quote / Estimate</option>
           <option value="Advisory">Advisory / Architecture</option>
@@ -105,7 +100,7 @@
         <select class="input" name="serviceArea" required>
           <option value="Teamcenter">Teamcenter (Core / Workflow / BMIDE)</option>
           <option value="Active Workspace">Active Workspace (AWC) – UI / Panels / Commands</option>
-          <option value="T4S">T4S (Teamcenter â†” SAP)</option>
+          <option value="T4S">T4S (Teamcenter ↔ SAP)</option>
           <option value="T4EA">T4EA</option>
           <option value="T4ST">T4ST</option>
           <option value="CN4T / Opcenter">CN4T / Opcenter</option>
@@ -188,7 +183,7 @@
 
     <div>
       <div class="label">Details (paste errors/logs + steps)</div>
-      <textarea class="input" name="message" placeholder="Include: steps, exact error text, log snippet, object types, expected vs actual. The more concrete, the faster triage." required></textarea>
+      <textarea class="input" name="message" placeholder="Include: steps, exact error text, log snippet, object types, expected vs actual. The more concrete, the faster we can respond." required></textarea>
     </div>
 
     <div class="row">
@@ -219,7 +214,7 @@
     </label>
 
     <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
-      <button id="submitBtn" class="btn primary" type="submit">Generate Triage Email</button>
+      <button id="submitBtn" class="btn primary" type="submit">Generate Request Email</button>
       <span id="formStatus" style="color:var(--muted);font-size:13px"></span>
     </div>
   </form>
@@ -230,7 +225,7 @@
 
   <footer class="footer">
     <div class="container">
-      <div>© 2026 PLM Ops Studio — Trusted for 1M+ PLM operations worldwide</div>
+      <div>© 2026 PLM AI Service — Trusted for 1M+ PLM operations worldwide</div>
       <div>Contact: teamcentersap@gmail.com • For urgent incidents: use Client Portal</div>
     </div>
   </footer>
