@@ -4,6 +4,14 @@
     if(a.getAttribute('href') === path) a.classList.add('active');
   });
 
+  // Fire a lightweight GA4 signal to confirm tracking in Realtime/DebugView.
+  if (typeof window.gtag === 'function') {
+    window.gtag('event', 'site_ping', {
+      page_path: location.pathname,
+      page_title: document.title
+    });
+  }
+
   // Portal form handler
   const form = document.querySelector('#requestForm');
   if(!form) return;
