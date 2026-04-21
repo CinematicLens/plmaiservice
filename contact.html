@@ -4,10 +4,10 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Contact – PLM AI Services</title>
-  <meta name="description" content="Contact PLM AI Services for PLM & SAP integration services and products. Email: teamcentersap@gmail.com"/>
+  <meta name="description" content="Contact PLM AI Services for Teamcenter, PLM integration, and product inquiries. Send a message through our secure form."/>
   <link rel="canonical" href="https://plmaiservice.com/contact.html"/>
   <meta property="og:title" content="Contact | PLM AI Services"/>
-  <meta property="og:description" content="Email PLM AI Services: teamcentersap@gmail.com"/>
+  <meta property="og:description" content="Send a message to PLM AI Services."/>
   <meta property="og:url" content="https://plmaiservice.com/contact.html"/>
   <link rel="stylesheet" href="assets/styles.css"/>
 <!-- Google tag (gtag.js) -->
@@ -31,7 +31,7 @@
         <a data-nav href="contact.html">Contact</a>
       </nav>
       <div class="cta">
-        <a class="btn primary" href="mailto:teamcentersap@gmail.com">Email us</a>
+        <a class="btn primary" href="#contact-form">Send a message</a>
       </div>
     </div>
   </header>
@@ -39,17 +39,55 @@
   <main class="container">
     <section class="hero hero-compact">
       <h1 class="h-title" style="font-size:34px">Contact</h1>
-      <p class="h-sub">Reach out for product questions, licensing, or PLM services.</p>
+      <p class="h-sub">Product questions, licensing, Teamcenter engagements, or PLM integration—send a message below. We typically reply within 24–72 hours.</p>
     </section>
 
-    <div class="grid">
-      <div class="card" style="grid-column:span 6">
-        <h3>Email</h3>
-        <p><a href="mailto:teamcentersap@gmail.com" style="color:var(--accent)">teamcentersap@gmail.com</a></p>
-        <div class="notice" style="margin-top:12px">
-          For queries, email us at teamcentersap@gmail.com.
+    <div class="card" id="contact-form" style="max-width:720px">
+      <h2 class="section-title" style="margin-top:0">Write to us</h2>
+      <p class="section-sub" style="margin-bottom:16px">Your details are sent securely. We do not publish our inbox on the site to reduce spam.</p>
+
+      <form id="contactForm" class="form" novalidate>
+        <input type="hidden" name="_subject" value="PLM AI Services — website inquiry"/>
+        <div class="row">
+          <div>
+            <div class="label">Name</div>
+            <input class="input" name="name" type="text" autocomplete="name" required placeholder="Your name"/>
+          </div>
+          <div>
+            <div class="label">Company</div>
+            <input class="input" name="company" type="text" autocomplete="organization" placeholder="Company (optional)"/>
+          </div>
         </div>
-      </div>
+        <div>
+          <div class="label">Your email</div>
+          <input class="input" name="email" type="email" autocomplete="email" required placeholder="you@company.com"/>
+        </div>
+        <div>
+          <div class="label">Topic</div>
+          <select class="input" name="topic" required>
+            <option value="">Select…</option>
+            <option value="Teamcenter / AWC / T4x">Teamcenter / AWC / T4x</option>
+            <option value="SAP integration">SAP integration</option>
+            <option value="Products (BOM Compare, DocRev)">Products (BOM Compare, DocRev)</option>
+            <option value="General">General</option>
+          </select>
+        </div>
+        <div>
+          <div class="label">Message</div>
+          <textarea class="input" name="message" required placeholder="Describe your goal, environment, and any versions (Teamcenter, AWC, T4x) if relevant."></textarea>
+        </div>
+        <label style="display:flex;gap:10px;align-items:flex-start">
+          <input type="checkbox" name="consent" value="yes" required style="margin-top:4px"/>
+          <span style="font-size:13px;color:var(--muted)">I agree to be contacted about this inquiry.</span>
+        </label>
+        <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap">
+          <button id="contactSubmitBtn" class="btn primary" type="submit">Send message</button>
+          <span id="contactFormStatus" style="color:var(--muted);font-size:13px"></span>
+        </div>
+      </form>
+    </div>
+
+    <div class="grid" style="margin-top:28px">
       <div class="card" style="grid-column:span 6">
         <h3>Products</h3>
         <ul class="list">
@@ -57,8 +95,12 @@
           <li><a href="https://apps.microsoft.com/detail/9mxr3wlmq0g7?hl=en-US&gl=IN" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">DocRev Manager</a></li>
         </ul>
         <div class="cta" style="justify-content:flex-start;margin-top:12px">
-          <a class="btn" href="products.html">View products page</a>
+          <a class="btn" href="products.html">Services &amp; products overview</a>
         </div>
+      </div>
+      <div class="card" style="grid-column:span 6">
+        <h3>Structured intake (optional)</h3>
+        <p style="margin:0;color:var(--muted);line-height:1.5">For detailed Teamcenter incidents, you can use our longer <a href="portal.html" style="color:var(--accent)">request intake</a> form after first contact.</p>
       </div>
     </div>
   </main>
@@ -66,7 +108,7 @@
   <footer class="footer">
     <div class="container">
       <div>© 2026 PLM AI Services</div>
-      <div>Contact: teamcentersap@gmail.com</div>
+      <div><a href="contact.html" style="color:inherit">Contact</a></div>
     </div>
   </footer>
 
@@ -74,4 +116,3 @@
   <script src="assets/main.js"></script>
 </body>
 </html>
-
