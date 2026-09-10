@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720" role="img" aria-labelledby="t d">
+  <title id="t">BOM Compare Tool screenshot placeholder</title>
+  <desc id="d">Replace this placeholder with an approved product screenshot. [ADD SCREENSHOT]</desc>
+  <rect width="1200" height="720" fill="#eef2f6"/>
+  <rect x="80" y="60" width="1040" height="600" rx="12" fill="#ffffff" stroke="#d0d7de"/>
+  <rect x="80" y="60" width="1040" height="48" rx="12" fill="#0c3b5e"/>
+  <rect x="80" y="92" width="1040" height="16" fill="#0c3b5e"/>
+  <text x="110" y="92" fill="#ffffff" font-family="Segoe UI, Arial, sans-serif" font-size="20">BOM Compare Tool</text>
+  <text x="600" y="360" text-anchor="middle" fill="#0c3b5e" font-family="Segoe UI, Arial, sans-serif" font-size="28" font-weight="700">[ADD SCREENSHOT]</text>
+  <text x="600" y="400" text-anchor="middle" fill="#4a5568" font-family="Segoe UI, Arial, sans-serif" font-size="18">Replace with a genuine BOM comparison window capture</text>
+</svg>
