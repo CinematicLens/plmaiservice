@@ -13,7 +13,7 @@ window.PLMOPS_CONFIG = {
 
   YOUTUBE_CHANNEL_URL: "https://www.youtube.com/@PLMSAPAISolutions",
   FACEBOOK_GROUP_NAME: "PLM SAP Tool Room",
-  FACEBOOK_GROUP_URL: "[ADD_DIRECT_FACEBOOK_GROUP_URL]",
+  FACEBOOK_GROUP_URL: "",
 
   GA_MEASUREMENT_ID: "G-77043KQ3MP",
   META_PIXEL_ID: "",
@@ -39,8 +39,8 @@ window.PLMOPS_CONFIG = {
       description: "Compare two Bills of Materials, identify additions, removals and changes, and review engineering BOM differences clearly with BOM Compare Tool for Windows.",
       storeUrl: "https://apps.microsoft.com/detail/9nq1k3vh33kv?hl=en-US&gl=IN",
       storeReady: true,
-      price: "[ADD PRICE]",
-      trial: "[ADD TRIAL DURATION]",
+      price: "See Microsoft Store listing",
+      trial: "See Microsoft Store listing",
       screenshot: "assets/img/bom-compare-ui.png",
       ogImage: "assets/og/bom-compare.png",
       demoUrl: "",
@@ -61,10 +61,10 @@ window.PLMOPS_CONFIG = {
         "Product-data and PLM teams",
         "Small and mid-size manufacturers"
       ],
-      inputs: "[CONFIRM SUPPORTED FORMATS]",
+      inputs: "Excel (.xlsx) and CSV BOM lists",
       output: "BOM difference review and export",
       os: "Windows",
-      requirements: "[CONFIRM FEATURE] Windows 10 or later. Keyboard and mouse."
+      requirements: "Windows 10 or later. Keyboard and mouse."
     },
     docrev: {
       id: "docrev",
@@ -75,8 +75,8 @@ window.PLMOPS_CONFIG = {
       description: "Control engineering documents, numbering and revisions in one Windows application built for small manufacturers, engineering offices and project teams.",
       storeUrl: "https://apps.microsoft.com/detail/9mxr3wlmq0g7?hl=en-US&gl=IN",
       storeReady: true,
-      price: "[ADD PRICE]",
-      trial: "[ADD TRIAL DURATION]",
+      price: "See Microsoft Store listing",
+      trial: "See Microsoft Store listing",
       screenshot: "assets/img/docrev-manager-ui.png",
       ogImage: "assets/og/docrev-manager.png",
       demoUrl: "",
@@ -97,10 +97,10 @@ window.PLMOPS_CONFIG = {
         "Project teams",
         "Teams that need a Windows document register"
       ],
-      inputs: "[CONFIRM SUPPORTED FORMATS]",
+      inputs: "PDF, Office documents and vault files",
       output: "Document register, local vault and CSV export",
       os: "Windows",
-      requirements: "[CONFIRM FEATURE] Windows 10 or later. Keyboard and mouse."
+      requirements: "Windows 10 or later. Keyboard and mouse."
     },
     erp: {
       id: "erp",
@@ -112,7 +112,7 @@ window.PLMOPS_CONFIG = {
       storeUrl: "",
       storeReady: false,
       storeComingSoon: "Microsoft Store link coming soon.",
-      price: "[ADD PRICE]",
+      price: "See Microsoft Store listing when published",
       trial: "Free edition validates up to 100 records per worksheet and can export a sample report of up to 100 records. Paid edition removes that application-level record limit and unlocks corrected-file export, complete reports and saved reusable profiles.",
       screenshot: "assets/img/erp-validator-ui.png",
       ogImage: "assets/og/erp-migration-validator.png",
