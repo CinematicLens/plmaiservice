@@ -8,7 +8,7 @@ window.PLMOPS_CONFIG = {
 
   SITE_NAME: "PLM AI Services",
   SITE_URL: "https://plmaiservice.com",
-  SITE_TAGLINE: "Practical Windows software for manufacturing, engineering and product-data teams.",
+  SITE_TAGLINE: "Lean Consult for the shop floor. App PLM Products for engineering data on Windows.",
   SUPPORT_EMAIL: "teamcentersap@gmail.com",
 
   YOUTUBE_CHANNEL_URL: "https://www.youtube.com/@PLMSAPAISolutions",
@@ -22,6 +22,7 @@ window.PLMOPS_CONFIG = {
     facebook_bom_compare: "facebook_bom_compare",
     facebook_docrev: "facebook_docrev",
     facebook_erp_validator: "facebook_erp_validator",
+    facebook_leanconsult: "facebook_leanconsult",
     instagram_bom_compare: "instagram_bom_compare",
     linkedin_bom_compare: "linkedin_bom_compare",
     youtube_bom_compare: "youtube_bom_compare",
@@ -30,7 +31,45 @@ window.PLMOPS_CONFIG = {
   },
 
   products: {
+    lean: {
+      id: "lean",
+      name: "LeanConsult Factory",
+      shortName: "Lean Consult",
+      family: "lean",
+      page: "leanconsult-factory.html",
+      problem: "Turn a workplace photo and short description into a cautious, measurable lean experiment — on device.",
+      description: "LeanConsult Factory helps production supervisors and continuous-improvement leads capture a workplace condition, describe it by voice or text, and get a reversible one-shift trial plan generated privately on device.",
+      storeUrl: "https://apps.apple.com/us/app/leanconsult-factory/id6794219819",
+      storeReady: true,
+      storePlatform: "apple",
+      storeLabel: "Get on the App Store",
+      trial: "See the App Store listing for the current offer in your market.",
+      screenshot: "assets/img/leanconsult-how-it-works.png",
+      ogImage: "assets/img/leanconsult-how-it-works.png",
+      demoUrl: "",
+      demoTitle: "LeanConsult Factory Demo",
+      storeEvent: "click_lean_appstore",
+      viewEvent: "view_leanconsult",
+      campaignHome: "website_home",
+      campaignPage: "website_product_page",
+      campaignFacebook: "facebook_leanconsult",
+      benefits: [
+        "One clear problem framing and a reversible one-shift trial",
+        "Before/after measurement rows and an action board for next shifts",
+        "Encrypted on-device history and PDF export for huddles"
+      ],
+      users: [
+        "Production supervisors",
+        "Continuous-improvement and Kaizen leads",
+        "Shop-floor teams walking the line"
+      ],
+      inputs: "Workplace photo plus spoken or typed description",
+      output: "Lean experiment plan, measurement rows, action board, optional PDF",
+      os: "iPhone, iPad (iOS / iPadOS)",
+      requirements: "Requires iOS 26.0 or later (see App Store for current compatibility)."
+    },
     bom: {
+      family: "plm",
       id: "bom",
       name: "BOM Compare Tool",
       shortName: "BOM Compare",
@@ -39,7 +78,6 @@ window.PLMOPS_CONFIG = {
       description: "Compare two Bills of Materials on Windows (CSV, Excel, JSON; PLMXML on Source). Validate BOMs locally; export CSV/PDF when your Store licence includes export.",
       storeUrl: "https://apps.microsoft.com/detail/9nq1k3vh33kv?hl=en-US&gl=IN",
       storeReady: true,
-      price: "See Microsoft Store",
       trial: "See Microsoft Store for trial and licensing details.",
       screenshot: "assets/img/bom-compare-ui.png",
       ogImage: "assets/og/bom-compare.png",
@@ -70,12 +108,12 @@ window.PLMOPS_CONFIG = {
       id: "docrev",
       name: "DocRev Manager",
       shortName: "DocRev Manager",
+      family: "plm",
       page: "docrev-manager.html",
       problem: "Control engineering documents, numbering and revisions from one Windows application.",
       description: "Control engineering documents, numbering and revisions in one Windows application built for small manufacturers, engineering offices and project teams.",
       storeUrl: "https://apps.microsoft.com/detail/9mxr3wlmq0g7?hl=en-US&gl=IN",
       storeReady: true,
-      price: "See Microsoft Store",
       trial: "See Microsoft Store for trial and licensing details.",
       screenshot: "assets/img/docrev-manager-ui.png",
       ogImage: "assets/og/docrev-manager.png",
@@ -106,13 +144,13 @@ window.PLMOPS_CONFIG = {
       id: "erp",
       name: "ERP Migration File Validator",
       shortName: "ERP Validator",
+      family: "plm",
       page: "erp-migration-validator.html",
       problem: "Validate ERP migration files and identify data-quality problems before upload.",
       description: "Validate Excel and CSV migration files, identify missing or invalid records, and improve ERP data quality before import with ERP Migration File Validator for Windows.",
       storeUrl: "",
       storeReady: false,
       storeComingSoon: "Microsoft Store link coming soon.",
-      price: "See Microsoft Store when published",
       trial: "Free edition validates up to 100 records per worksheet and can export a sample report of up to 100 records. Professional edition removes that record limit and unlocks corrected-file export, complete reports and saved reusable profiles.",
       screenshot: "assets/img/erp-validator-ui.png",
       ogImage: "assets/og/erp-migration-validator.png",
@@ -138,7 +176,7 @@ window.PLMOPS_CONFIG = {
         "Small and mid-sized companies preparing ERP imports"
       ],
       inputs: "CSV, XLSX and SpreadsheetML XML",
-      output: "Issue grid, XLSX audit report, and optional corrected sibling file (paid edition)",
+      output: "Issue grid, XLSX audit report, and optional corrected sibling file (Professional edition)",
       os: "Windows",
       requirements: "Windows 10 version 2004 (build 19041) or later, or Windows 11. Keyboard and mouse. Minimum usable resolution 1280 × 720. Works at 100%, 125%, 150% and 200% display scaling."
     }

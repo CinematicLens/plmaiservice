@@ -51,8 +51,13 @@
     return fallback;
   }
 
+  function isAppleStore(product){
+    return product && (product.storePlatform === "apple" || /apps\.apple\.com/i.test(product.storeUrl || ""));
+  }
+
   function storeUrl(product, fallbackCampaign){
     if (!product || !product.storeReady || !product.storeUrl) return "";
+    if (isAppleStore(product)) return product.storeUrl;
     return withCid(product.storeUrl, campaignFor(product, fallbackCampaign));
   }
 
@@ -77,7 +82,8 @@
       el.target = "_blank";
       el.rel = "noopener noreferrer";
       el.addEventListener("click", function(){
-        track("click_microsoft_store", { product: product.id });
+        const storeEvent = isAppleStore(product) ? "click_app_store" : "click_microsoft_store";
+        track(storeEvent, { product: product.id, store_platform: isAppleStore(product) ? "apple" : "microsoft" });
         track(product.storeEvent, { product: product.id });
         if (el.hasAttribute("data-trial")) track("click_trial", { product: product.id });
       });
