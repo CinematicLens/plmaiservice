@@ -36,11 +36,11 @@ window.PLMOPS_CONFIG = {
       shortName: "BOM Compare",
       page: "bom-compare.html",
       problem: "Compare Source and Target BOM files and review Matched, Different and side-only rows.",
-      description: "Compare two Bills of Materials on Windows (CSV, Excel, JSON; PLMXML on Source). Validate BOMs locally and export CSV/PDF on the paid plan.",
+      description: "Compare two Bills of Materials on Windows (CSV, Excel, JSON; PLMXML on Source). Validate BOMs locally; export CSV/PDF when your Store licence includes export.",
       storeUrl: "https://apps.microsoft.com/detail/9nq1k3vh33kv?hl=en-US&gl=IN",
       storeReady: true,
-      price: "See Microsoft Store listing",
-      trial: "Free compare + view; paid unlocks CSV/PDF export. 30-day Pro trial in next Store build—confirm on Store.",
+      price: "See Microsoft Store",
+      trial: "See Microsoft Store for trial and licensing details.",
       screenshot: "assets/img/bom-compare-ui.png",
       ogImage: "assets/og/bom-compare.png",
       demoUrl: "",
@@ -53,7 +53,7 @@ window.PLMOPS_CONFIG = {
       benefits: [
         "Upload Source BOM and Target BOM, then Validate BOMs",
         "Review Matched, Different, Source-only and Target-only rows",
-        "Export CSV/PDF on paid plan; processing stays on your PC"
+        "Export CSV/PDF when entitled; processing stays on your PC"
       ],
       users: [
         "Manufacturing and product-data teams",
@@ -62,7 +62,7 @@ window.PLMOPS_CONFIG = {
         "Small and mid-size manufacturers"
       ],
       inputs: "CSV, Excel (.xlsx), JSON; PLMXML (Source BOM only); max 50 MB per file",
-      output: "Matched/Different/side-only results; CSV/PDF export on paid plan",
+      output: "Matched/Different/side-only results; CSV/PDF export when entitled",
       os: "Windows",
       requirements: "Windows 10 or later (x64). Keyboard and mouse."
     },
@@ -75,8 +75,8 @@ window.PLMOPS_CONFIG = {
       description: "Control engineering documents, numbering and revisions in one Windows application built for small manufacturers, engineering offices and project teams.",
       storeUrl: "https://apps.microsoft.com/detail/9mxr3wlmq0g7?hl=en-US&gl=IN",
       storeReady: true,
-      price: "$59.99 USD one-time (confirm on Microsoft Store)",
-      trial: "Free trial where offered on Microsoft Store",
+      price: "See Microsoft Store",
+      trial: "See Microsoft Store for trial and licensing details.",
       screenshot: "assets/img/docrev-manager-ui.png",
       ogImage: "assets/og/docrev-manager.png",
       demoUrl: "",
@@ -112,8 +112,8 @@ window.PLMOPS_CONFIG = {
       storeUrl: "",
       storeReady: false,
       storeComingSoon: "Microsoft Store link coming soon.",
-      price: "$999.99 USD Professional (one-time; confirm when Store listing is live)",
-      trial: "Free edition validates up to 100 records per worksheet and can export a sample report of up to 100 records. Paid edition removes that application-level record limit and unlocks corrected-file export, complete reports and saved reusable profiles.",
+      price: "See Microsoft Store when published",
+      trial: "Free edition validates up to 100 records per worksheet and can export a sample report of up to 100 records. Professional edition removes that record limit and unlocks corrected-file export, complete reports and saved reusable profiles.",
       screenshot: "assets/img/erp-validator-ui.png",
       ogImage: "assets/og/erp-migration-validator.png",
       demoUrl: "",
