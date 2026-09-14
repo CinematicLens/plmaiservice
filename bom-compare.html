@@ -4,17 +4,17 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>BOM Compare Tool for Windows | Excel BOM Comparison | PLM AI Services</title>
-  <meta name="description" content="BOM Compare Tool for Windows: compare two Bills of Materials, spot additions, removals and quantity changes, and export a clear BOM difference report. Available on Microsoft Store."/>
-  <meta name="keywords" content="BOM compare tool, Excel BOM comparison, bill of materials compare, BOM diff software, engineering BOM comparison, manufacturing BOM comparison, Windows BOM software"/>
+  <meta name="description" content="BOM Compare Tool for Windows: upload Source and Target BOMs (CSV, Excel, JSON; PLMXML on Source), validate locally, and review Matched, Different and side-only rows. Microsoft Store."/>
+  <meta name="keywords" content="BOM compare tool, Excel BOM comparison, bill of materials compare, BOM diff software, engineering BOM comparison, manufacturing BOM comparison, Windows BOM software, PLMXML BOM"/>
   <link rel="canonical" href="https://plmaiservice.com/bom-compare.html"/>
   <meta property="og:type" content="website"/>
   <meta property="og:title" content="BOM Compare Tool for Windows | Excel BOM Comparison | PLM AI Services"/>
-  <meta property="og:description" content="Compare two Bills of Materials on Windows. Identify additions, removals and changes, then export a clear difference report."/>
+  <meta property="og:description" content="Compare Source and Target BOMs on Windows. Review Matched, Different and side-only rows. CSV/PDF export on paid plan. Processing stays on your PC."/>
   <meta property="og:url" content="https://plmaiservice.com/bom-compare.html"/>
   <meta property="og:image" content="https://plmaiservice.com/assets/og/bom-compare.png"/>
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:title" content="BOM Compare Tool for Windows | Excel BOM Comparison | PLM AI Services"/>
-  <meta name="twitter:description" content="Compare two Bills of Materials on Windows. Identify additions, removals and changes, then export a clear difference report."/>
+  <meta name="twitter:description" content="Compare Source and Target BOMs on Windows. Review Matched, Different and side-only rows. Processing stays on your PC."/>
   <meta name="twitter:image" content="https://plmaiservice.com/assets/og/bom-compare.png"/>
   <link rel="stylesheet" href="assets/styles.css"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-77043KQ3MP"></script>
@@ -30,15 +30,15 @@
         "operatingSystem":"Windows",
         "url":"https://plmaiservice.com/bom-compare.html",
         "image":"https://plmaiservice.com/assets/img/bom-compare-ui.png",
-        "description":"Compare two Bills of Materials, identify additions, removals and changes, and export a clear BOM difference report on Windows.",
+        "description":"Compare Source and Target Bills of Materials on Windows. Validate CSV, Excel, JSON and PLMXML (Source) locally and review Matched, Different and side-only rows.",
         "offers":{"@type":"Offer","url":"https://apps.microsoft.com/detail/9nq1k3vh33kv?hl=en-US&gl=IN","availability":"https://schema.org/InStock","priceCurrency":"USD"}
       },
       {
         "@type":"FAQPage",
         "mainEntity":[
           {"@type":"Question","name":"Is this BOM comparison software for Windows only?","acceptedAnswer":{"@type":"Answer","text":"Yes. BOM Compare Tool is Windows software listed on Microsoft Store."}},
-          {"@type":"Question","name":"Can it compare Excel BOM files?","acceptedAnswer":{"@type":"Answer","text":"Yes. It is built for teams that compare Bills of Materials from spreadsheet workflows such as Excel (.xlsx) and CSV BOM lists."}},
-          {"@type":"Question","name":"What does the difference report show?","acceptedAnswer":{"@type":"Answer","text":"The report highlights additions, removals and changes between two BOM versions so engineering and manufacturing can review the delta before release."}},
+          {"@type":"Question","name":"Which file formats are supported?","acceptedAnswer":{"@type":"Answer","text":"CSV, Excel (.xlsx) and JSON on both sides. PLMXML is accepted for Source BOM only. Maximum 50 MB per file."}},
+          {"@type":"Question","name":"What do the comparison results show?","acceptedAnswer":{"@type":"Answer","text":"Matched, Different, Source BOM only and Target BOM only rows, with side-by-side field values and column mapping."}},
           {"@type":"Question","name":"Where do I get BOM Compare Tool?","acceptedAnswer":{"@type":"Answer","text":"Download and purchase BOM Compare Tool from the Microsoft Store listing."}}
         ]
       }
@@ -70,7 +70,7 @@
     <section class="hero">
       <p class="kicker">BOM comparison software for Windows</p>
       <h1 class="h-title">Compare two Bills of Materials before the wrong list reaches production.</h1>
-      <p class="h-sub">BOM Compare Tool is Windows software for engineering and manufacturing BOM comparison. Open two BOM versions, identify additions, removals and quantity changes, then export a clear difference report.</p>
+      <p class="h-sub">Upload Source BOM and Target BOM, run Validate BOMs, then review Matched, Different, Source-only and Target-only rows—including quantity and field differences. Runs locally on Windows.</p>
       <div class="cta-row">
         <a class="btn primary" data-store="bom" data-campaign="website_product_page">Get from Microsoft Store</a>
         <a class="btn" data-demo="bom">Watch Demo</a>
@@ -78,9 +78,9 @@
     </section>
 
     <div class="shot-frame">
-      <img src="assets/img/bom-compare-ui.png" width="1200" height="720" alt="BOM Compare Tool interface showing BOM A and BOM B side by side with a color-coded difference report for additions, removals and quantity changes" loading="eager"/>
+      <img src="assets/img/bom-compare-ui.png" width="1200" height="720" alt="BOM Compare Tool real app: Source and Target uploads, Validate BOMs, Matched/Different summary and results table" loading="eager"/>
     </div>
-    <p class="shot-caption">Open two BOM versions, review the difference report, then export for release or change review.</p>
+    <p class="shot-caption">Real app UI: upload two BOMs, Validate BOMs, filter Matched / Different / side-only, then export when your plan includes it.</p>
 
     <div class="repeat-cta">
       <a class="btn primary" data-store="bom" data-campaign="website_product_page">Get BOM Compare from Microsoft Store</a>
@@ -96,67 +96,70 @@
 
     <h2 class="section-title">Who it’s for</h2>
     <ul class="list">
-      <li>Manufacturing engineers comparing EBOM and MBOM revisions</li>
-      <li>Engineering offices that compare Excel and CSV BOM files</li>
-      <li>Product-data teams doing BOM revision comparison before release</li>
+      <li>Manufacturing and product-data teams comparing BOM exports before release</li>
+      <li>Engineering offices working from Excel, CSV or JSON BOM lists</li>
+      <li>Teams that export BOMs from PLM or ERP systems and need a clear local compare</li>
     </ul>
 
     <h2 class="section-title">Problems solved</h2>
     <div class="grid">
-      <div class="card span-4"><h3>Missed part additions</h3><p>See what was added between two BOM versions.</p></div>
-      <div class="card span-4"><h3>Silent removals</h3><p>See what disappeared before a build or release.</p></div>
-      <div class="card span-4"><h3>Unclear quantity changes</h3><p>Review quantity and attribute changes instead of scanning two lists by hand.</p></div>
+      <div class="card span-4"><h3>Parts only on one side</h3><p>See Source BOM only and Target BOM only rows instead of hunting two files by hand.</p></div>
+      <div class="card span-4"><h3>Hidden field differences</h3><p>Different status highlights mapped fields that do not match, including quantity.</p></div>
+      <div class="card span-4"><h3>Unclear column mapping</h3><p>Review which columns were compared and which were ignored before you trust the result.</p></div>
     </div>
 
     <h2 class="section-title">Key capabilities</h2>
     <ul class="list">
-      <li>Compare two Bills of Materials side by side</li>
-      <li>Highlight additions, removals and changes</li>
-      <li>Export a clear visual difference for sharing</li>
-      <li>Built for spreadsheet BOM workflows used by engineering and manufacturing teams</li>
+      <li>Upload Source BOM and Target BOM, then Validate BOMs</li>
+      <li>Summary filters: Matched, Different, Source BOM only, Target BOM only</li>
+      <li>Optional saved mapping presets and Mapping Manager (paid / Pro)</li>
+      <li>Search, column picker, row detail and ignored-item review</li>
+      <li>Export CSV or PDF on paid / Pro plans; download compare log on Free</li>
+      <li>Runs locally on your Windows PC — BOM files are not uploaded to our servers</li>
     </ul>
 
     <h2 class="section-title">Three-step workflow</h2>
     <div class="steps">
-      <div class="card"><div class="step-num">STEP 1</div><h3>Open two BOM versions</h3><p>Load the released and revised lists you want to compare.</p></div>
-      <div class="card"><div class="step-num">STEP 2</div><h3>Review the difference</h3><p>Identify additions, removals and changes in one report.</p></div>
-      <div class="card"><div class="step-num">STEP 3</div><h3>Export</h3><p>Keep a shareable record for purchasing, quality or release reviews.</p></div>
+      <div class="card"><div class="step-num">STEP 1</div><h3>Upload Source and Target</h3><p>Choose CSV, Excel or JSON files (PLMXML on Source BOM). Max 50 MB each.</p></div>
+      <div class="card"><div class="step-num">STEP 2</div><h3>Validate BOMs</h3><p>Review Matched, Different and side-only rows with column mapping.</p></div>
+      <div class="card"><div class="step-num">STEP 3</div><h3>Export when entitled</h3><p>Export CSV/PDF on paid or Pro trial plans, or keep reviewing on Free.</p></div>
     </div>
 
     <div class="repeat-cta"><a class="btn primary" data-store="bom" data-campaign="website_product_page">Get from Microsoft Store</a></div>
 
     <h2 class="section-title">Supported input formats</h2>
-    <p>Designed for spreadsheet BOM lists commonly used in engineering offices, including Excel (.xlsx) and CSV. See the Microsoft Store listing for the current import options in your installed version.</p>
+    <p>CSV, Excel (.xlsx) and JSON for both Source and Target. PLMXML for Source BOM only. Maximum 50 MB per file.</p>
 
     <h2 class="section-title">Example output</h2>
-    <p>A visual BOM difference report that shows what changed between two versions, plus an export for audit and handoff.</p>
+    <p>A results table with side-by-side field values, status (Matched / Different / Source only / Target only), column-mapping summary and optional CSV or PDF export on paid plans.</p>
 
     <h2 class="section-title">Before versus after</h2>
     <div class="grid">
       <div class="card span-6">
         <h3>Before</h3>
-        <p>Two BOM revisions sit in separate spreadsheets. Additions, removals and quantity changes are easy to miss.</p>
+        <p>Two BOM exports sit in separate spreadsheets. Matched parts, field diffs and one-side-only rows are easy to miss.</p>
       </div>
       <div class="card span-6">
         <h3>After</h3>
-        <p>One Windows BOM compare tool shows the difference so manufacturing and engineering can review changes together.</p>
+        <p>One local Windows tool validates Source against Target and shows Matched, Different and side-only rows in one place.</p>
       </div>
     </div>
 
     <h2 class="section-title">Trial, price and licensing</h2>
-    <p>Licensing is through Microsoft Store. Current price and any trial offer are shown on the Store product page and may vary by market. Refunds follow Microsoft Store policy.</p>
+    <p>Licensing is through Microsoft Store. Free tier: upload, validate and review results plus download the compare log. Paid / Pro unlocks CSV and PDF export and Mapping Manager. A 30-day Pro trial model is in active development for the next Store build—confirm live trial and price on the Store product page. Refunds follow Microsoft Store policy.</p>
 
     <h2 class="section-title">Data privacy</h2>
-    <p>BOM Compare Tool is a Windows desktop application. For how your files are handled in the current release, see our <a href="privacy.html">Privacy</a> page and the Store listing. Questions: use the <a href="contact.html">contact form</a>.</p>
+    <p>BOM Compare Tool processes files locally on your Windows PC. BOM files are not uploaded to our servers; the app does not send product telemetry. See our <a href="privacy.html">Privacy</a> page and the Store listing. Questions: use the <a href="contact.html">contact form</a>.</p>
 
     <h2 class="section-title">Windows system requirements</h2>
-    <p>Windows 10 or later. Keyboard and mouse. Install from Microsoft Store on a supported PC.</p>
+    <p>Windows 10 or later (x64). Keyboard and mouse. Install from Microsoft Store on a supported PC.</p>
 
     <h2 class="section-title">FAQ</h2>
     <div class="faq">
       <details><summary>Is this BOM comparison software for Windows only?</summary><p>Yes. BOM Compare Tool is Windows software listed on Microsoft Store.</p></details>
-      <details><summary>Can it compare Excel BOM files?</summary><p>Yes. It is built for teams that compare Bills of Materials from spreadsheet workflows such as Excel (.xlsx) and CSV BOM lists.</p></details>
-      <details><summary>What does the difference report show?</summary><p>Additions, removals and changes between two BOM versions so you can review the delta before release.</p></details>
+      <details><summary>Which file formats are supported?</summary><p>CSV, Excel (.xlsx) and JSON on both sides. PLMXML for Source BOM only. Max 50 MB per file.</p></details>
+      <details><summary>What do the comparison results show?</summary><p>Matched, Different, Source BOM only and Target BOM only rows, with side-by-side field values and column mapping.</p></details>
+      <details><summary>Is export free?</summary><p>Free tier can compare and view results and download the compare log. CSV/PDF export and Mapping Manager require paid / Pro (or an active Pro trial when that build is live on Store).</p></details>
       <details><summary>Where do I get it?</summary><p>Microsoft Store listing for BOM Compare Tool.</p></details>
     </div>
 

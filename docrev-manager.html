@@ -37,8 +37,8 @@
         "@type":"FAQPage",
         "mainEntity":[
           {"@type":"Question","name":"Is DocRev Manager a full PLM system?","acceptedAnswer":{"@type":"Answer","text":"No. It is a Windows application for document numbering, revision tracking and a local vault. It is not a Teamcenter or enterprise PLM replacement."}},
-          {"@type":"Question","name":"Does it replace network document management?","acceptedAnswer":{"@type":"Answer","text":"It provides a local vault, search, CSV export and backup for project document control on Windows. It is designed for teams that need a focused register, not a full enterprise DMS."}},
-          {"@type":"Question","name":"What file types can I manage?","acceptedAnswer":{"@type":"Answer","text":"Common engineering deliverables such as PDF, Office documents and other files stored in the local vault. See the Microsoft Store listing for the current supported set."}},
+          {"@type":"Question","name":"Does it need AutoCAD or Solid Edge add-ins?","acceptedAnswer":{"@type":"Answer","text":"No. DWG/DXF and Solid Edge files are vaulted and open in your installed apps. There is no CAD add-in."}},
+          {"@type":"Question","name":"What file types can I manage?","acceptedAnswer":{"@type":"Answer","text":"PDF, AutoCAD DWG/DXF, Solid Edge DFT/PAR/ASM/PSM, STEP/STP, DOCX, XLSX, PNG, JPG and other files you choose to vault."}},
           {"@type":"Question","name":"Where do I get DocRev Manager?","acceptedAnswer":{"@type":"Answer","text":"Download and purchase DocRev Manager from the Microsoft Store listing."}}
         ]
       }
@@ -70,7 +70,7 @@
     <section class="hero">
       <p class="kicker">Document revision control software for Windows</p>
       <h1 class="h-title">Keep engineering documents numbered, revised and findable in one Windows app.</h1>
-      <p class="h-sub">DocRev Manager is Windows document control for small manufacturers, engineering offices and project teams. Manage projects, automatic numbering, revisions, a local vault and CSV export.</p>
+      <p class="h-sub">DocRev Manager is offline Windows document control for design offices and manufacturers. Number drawings, vault every revision, print transmittals, and keep shop copies under control—without a cloud PLM.</p>
       <div class="cta-row">
         <a class="btn primary" data-store="docrev" data-campaign="website_product_page">Get from Microsoft Store</a>
         <a class="btn" data-demo="docrev">Watch Demo</a>
@@ -78,9 +78,9 @@
     </section>
 
     <div class="shot-frame">
-      <img src="assets/img/docrev-manager-ui.png" width="1200" height="720" alt="DocRev Manager interface showing projects, document register, revision status and search" loading="eager"/>
+      <img src="assets/img/docrev-manager-ui.png" width="1200" height="720" alt="DocRev Manager real app window: project DEMO-2026, document grid with auto-numbered docs, Create document, Export CSV and Backup DB" loading="eager"/>
     </div>
-    <p class="shot-caption">Project-based document register with revision status, search and export.</p>
+    <p class="shot-caption">Real app UI: project register, automatic numbering, Create document, Export CSV and local vault.</p>
 
     <div class="repeat-cta">
       <a class="btn primary" data-store="docrev" data-campaign="website_product_page">Get DocRev Manager from Microsoft Store</a>
@@ -96,64 +96,70 @@
 
     <h2 class="section-title">Who it’s for</h2>
     <ul class="list">
-      <li>Small manufacturers needing manufacturing document control</li>
-      <li>Engineering offices tracking drawing revision management</li>
-      <li>Project teams that need a document vault for Windows</li>
+      <li>Design offices and machine builders managing drawings per job</li>
+      <li>Manufacturing and QA teams controlling released procedures and checklists</li>
+      <li>Engineering contractors with multi-customer projects and many revisions</li>
+      <li>Teams replacing shared-folder chaos without buying full PLM</li>
     </ul>
 
     <h2 class="section-title">Problems solved</h2>
     <div class="grid">
-      <div class="card span-4"><h3>Unclear latest revision</h3><p>Keep revisions together instead of scattered file names.</p></div>
-      <div class="card span-4"><h3>Inconsistent numbering</h3><p>Use document numbering in one controlled register.</p></div>
-      <div class="card span-4"><h3>Hard-to-search vaults</h3><p>Search the local vault and export CSV for a document register.</p></div>
+      <div class="card span-4"><h3>Wrong revision to the shop</h3><p>Keep a clear current revision and optional shop-floor Released-only views.</p></div>
+      <div class="card span-4"><h3>Inconsistent numbering</h3><p>Automatic document numbers with configurable project patterns.</p></div>
+      <div class="card span-4"><h3>Hard vendor handoff</h3><p>Print a transmittal ZIP of the exact revisions you issued.</p></div>
     </div>
 
     <h2 class="section-title">Key capabilities</h2>
     <ul class="list">
-      <li>Projects with separate registers</li>
-      <li>Automatic numbering</li>
-      <li>Revision control with history</li>
-      <li>Local vault</li>
-      <li>Search</li>
-      <li>CSV export</li>
-      <li>Database backup</li>
+      <li>Projects with separate document registers and local vault folders</li>
+      <li>Automatic numbering (for example ProjectCode-Seq) with configurable pattern and width</li>
+      <li>Revision history (A, B, C…) with a clear current revision</li>
+      <li>Statuses: Draft, Review, Released, Obsolete — with dashboard counts and filters</li>
+      <li>Drag-and-drop and Import folder when migrating from a shared drive</li>
+      <li>Check-out / check-in, owner, reason-for-change, review due date and audit trail</li>
+      <li>Transmittal package (cover sheet + ZIP of issued revisions)</li>
+      <li>Shop floor mode and job packet / traveler for Released copies</li>
+      <li>Release can require a PDF viewing copy; print stamps for controlled / obsolete copies</li>
+      <li>Customer drawing numbers, effectivity and lightweight change notices</li>
+      <li>Search with wildcards; CSV export; one-click database backup</li>
+      <li>Duplicate-file warning by checksum; works fully offline on this PC</li>
     </ul>
 
     <h2 class="section-title">Three-step workflow</h2>
     <div class="steps">
-      <div class="card"><div class="step-num">STEP 1</div><h3>Create a project</h3><p>Organise engineering documents in a Windows project.</p></div>
-      <div class="card"><div class="step-num">STEP 2</div><h3>Number and revise</h3><p>Apply automatic numbering and revision tracking.</p></div>
-      <div class="card"><div class="step-num">STEP 3</div><h3>Search and export</h3><p>Use the local vault, search, CSV export and backup.</p></div>
+      <div class="card"><div class="step-num">STEP 1</div><h3>Create a project</h3><p>Separate documents by customer or job and open the project vault folder.</p></div>
+      <div class="card"><div class="step-num">STEP 2</div><h3>Number, vault and revise</h3><p>Create documents, import a drawing folder, track revisions and status.</p></div>
+      <div class="card"><div class="step-num">STEP 3</div><h3>Issue and export</h3><p>Print a transmittal, use shop floor / job packet views, export CSV or back up the database.</p></div>
     </div>
 
     <div class="repeat-cta"><a class="btn primary" data-store="docrev" data-campaign="website_product_page">Get from Microsoft Store</a></div>
 
     <h2 class="section-title">Supported files</h2>
-    <p>Built for common engineering deliverables managed in a local vault, such as PDF and Office documents. See the Microsoft Store listing for the current supported file set in your installed version.</p>
+    <p>Vault common engineering formats: PDF, AutoCAD DWG/DXF, Solid Edge DFT/PAR/ASM/PSM, STEP/STP, DOCX, XLSX, PNG, JPG and more. Files open in your installed applications — no built-in CAD viewer and no AutoCAD or Solid Edge add-in.</p>
 
     <h2 class="section-title">Example output</h2>
-    <p>A maintained engineering document register with revisions, plus CSV export for reporting and handover.</p>
+    <p>A maintained engineering document register with revisions, a local vault of controlled files, CSV export, database backup and optional transmittal ZIP packages.</p>
 
     <h2 class="section-title">Before versus after</h2>
     <div class="grid">
-      <div class="card span-6"><h3>Before</h3><p>Drawings and technical files live in shared folders with overlapping names and unclear revisions.</p></div>
-      <div class="card span-6"><h3>After</h3><p>One Windows application holds projects, numbering, revisions, search and CSV export.</p></div>
+      <div class="card span-6"><h3>Before</h3><p>Drawings live in shared folders with overlapping names, unclear latest revision and no proof of what was issued to the shop or vendor.</p></div>
+      <div class="card span-6"><h3>After</h3><p>One offline Windows app holds projects, numbering, vaulted revisions, search, transmittals and CSV export.</p></div>
     </div>
 
     <h2 class="section-title">Trial, price and licensing</h2>
-    <p>Licensing is through Microsoft Store. Current price and any trial offer are shown on the Store product page and may vary by market. Refunds follow Microsoft Store policy.</p>
+    <p>Licensing is through Microsoft Store. Listing materials cite <strong>$59.99 USD</strong> one-time with a free trial option where offered. Confirm the live price and trial on the Store product page for your market. Refunds follow Microsoft Store policy.</p>
 
     <h2 class="section-title">Data privacy</h2>
-    <p>DocRev Manager includes a local vault on your Windows PC. For current data-handling details, see our <a href="privacy.html">Privacy</a> page and the Store listing. Questions: use the <a href="contact.html">contact form</a>.</p>
+    <p>DocRev Manager is fully offline. Document files stay in a local vault on your PC; the app database and settings live under your Windows user profile. No cloud account is required. See our <a href="privacy.html">Privacy</a> page. Questions: use the <a href="contact.html">contact form</a>.</p>
 
     <h2 class="section-title">Windows system requirements</h2>
-    <p>Windows 10 or later. Keyboard and mouse. Install from Microsoft Store on a supported PC.</p>
+    <p>Windows 10 version 1809 (build 17763) or later, or Windows 11. Keyboard and mouse. Install from Microsoft Store on a supported PC.</p>
 
     <h2 class="section-title">FAQ</h2>
     <div class="faq">
-      <details><summary>Is DocRev Manager a full PLM system?</summary><p>No. It is a Windows application for document numbering, revision tracking and a local vault. It is not a Teamcenter or enterprise PLM replacement.</p></details>
-      <details><summary>Does it replace network document management?</summary><p>It provides a local vault, search, CSV export and backup for project document control on Windows—not a full enterprise DMS.</p></details>
-      <details><summary>What file types can I manage?</summary><p>Common engineering deliverables such as PDF and Office documents in the local vault. Check the Store listing for the current supported set.</p></details>
+      <details><summary>Is DocRev Manager a full PLM system?</summary><p>No. It is a Windows application for document numbering, revision tracking and a local vault. It is not a Teamcenter, Autodesk Vault or enterprise PLM replacement.</p></details>
+      <details><summary>Does it need AutoCAD or Solid Edge add-ins?</summary><p>No. DWG/DXF and Solid Edge files are vaulted and open in your installed apps. There is no CAD add-in.</p></details>
+      <details><summary>What file types can I manage?</summary><p>PDF, AutoCAD DWG/DXF, Solid Edge DFT/PAR/ASM/PSM, STEP/STP, DOCX, XLSX, PNG, JPG and other files you choose to vault.</p></details>
       <details><summary>Where do I get it?</summary><p>Microsoft Store listing for DocRev Manager.</p></details>
     </div>
 

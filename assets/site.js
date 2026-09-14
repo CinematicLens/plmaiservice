@@ -203,6 +203,21 @@
     });
   }
 
+  function fillPriceLabels(){
+    document.querySelectorAll("[data-price]").forEach(function(el){
+      const key = el.getAttribute("data-price");
+      const product = products[key];
+      if (!product || !product.price) return;
+      el.textContent = product.price;
+    });
+    document.querySelectorAll("[data-trial-text]").forEach(function(el){
+      const key = el.getAttribute("data-trial-text");
+      const product = products[key];
+      if (!product || !product.trial) return;
+      el.textContent = product.trial;
+    });
+  }
+
   initPixel();
   markNav();
   mobileNav();
@@ -211,5 +226,6 @@
   bindSupport();
   bindFacebook();
   fillDynamicText();
+  fillPriceLabels();
   pageViewEvents();
 })();

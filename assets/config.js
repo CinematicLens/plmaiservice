@@ -35,12 +35,12 @@ window.PLMOPS_CONFIG = {
       name: "BOM Compare Tool",
       shortName: "BOM Compare",
       page: "bom-compare.html",
-      problem: "Compare BOM versions and identify additions, removals and changes clearly.",
-      description: "Compare two Bills of Materials, identify additions, removals and changes, and review engineering BOM differences clearly with BOM Compare Tool for Windows.",
+      problem: "Compare Source and Target BOM files and review Matched, Different and side-only rows.",
+      description: "Compare two Bills of Materials on Windows (CSV, Excel, JSON; PLMXML on Source). Validate BOMs locally and export CSV/PDF on the paid plan.",
       storeUrl: "https://apps.microsoft.com/detail/9nq1k3vh33kv?hl=en-US&gl=IN",
       storeReady: true,
       price: "See Microsoft Store listing",
-      trial: "See Microsoft Store listing",
+      trial: "Free compare + view; paid unlocks CSV/PDF export. 30-day Pro trial in next Store build—confirm on Store.",
       screenshot: "assets/img/bom-compare-ui.png",
       ogImage: "assets/og/bom-compare.png",
       demoUrl: "",
@@ -51,20 +51,20 @@ window.PLMOPS_CONFIG = {
       campaignPage: "website_product_page",
       campaignFacebook: "facebook_bom_compare",
       benefits: [
-        "Compare two BOMs quickly",
-        "Review additions, removals and changes",
-        "Export a clear visual difference"
+        "Upload Source BOM and Target BOM, then Validate BOMs",
+        "Review Matched, Different, Source-only and Target-only rows",
+        "Export CSV/PDF on paid plan; processing stays on your PC"
       ],
       users: [
-        "Manufacturing engineers",
+        "Manufacturing and product-data teams",
         "Engineering offices",
-        "Product-data and PLM teams",
+        "PLM and ERP export workflows",
         "Small and mid-size manufacturers"
       ],
-      inputs: "Excel (.xlsx) and CSV BOM lists",
-      output: "BOM difference review and export",
+      inputs: "CSV, Excel (.xlsx), JSON; PLMXML (Source BOM only); max 50 MB per file",
+      output: "Matched/Different/side-only results; CSV/PDF export on paid plan",
       os: "Windows",
-      requirements: "Windows 10 or later. Keyboard and mouse."
+      requirements: "Windows 10 or later (x64). Keyboard and mouse."
     },
     docrev: {
       id: "docrev",
@@ -75,8 +75,8 @@ window.PLMOPS_CONFIG = {
       description: "Control engineering documents, numbering and revisions in one Windows application built for small manufacturers, engineering offices and project teams.",
       storeUrl: "https://apps.microsoft.com/detail/9mxr3wlmq0g7?hl=en-US&gl=IN",
       storeReady: true,
-      price: "See Microsoft Store listing",
-      trial: "See Microsoft Store listing",
+      price: "$59.99 USD one-time (confirm on Microsoft Store)",
+      trial: "Free trial where offered on Microsoft Store",
       screenshot: "assets/img/docrev-manager-ui.png",
       ogImage: "assets/og/docrev-manager.png",
       demoUrl: "",
@@ -87,20 +87,20 @@ window.PLMOPS_CONFIG = {
       campaignPage: "website_product_page",
       campaignFacebook: "facebook_docrev",
       benefits: [
-        "Projects with automatic numbering",
-        "Revision control in a local vault",
-        "Search and CSV export"
+        "Automatic numbering and revision history in a local vault",
+        "Transmittal ZIP, shop floor and job packet workflows",
+        "Search, CSV export and one-click database backup — offline"
       ],
       users: [
-        "Small manufacturers",
-        "Engineering offices",
-        "Project teams",
-        "Teams that need a Windows document register"
+        "Design offices and machine builders",
+        "Manufacturing and QA teams",
+        "Engineering contractors",
+        "Teams replacing shared-folder document control"
       ],
-      inputs: "PDF, Office documents and vault files",
-      output: "Document register, local vault and CSV export",
+      inputs: "PDF, DWG/DXF, Solid Edge, STEP/STP, Office, PNG, JPG and other vault files",
+      output: "Document register, local vault, transmittal ZIP, CSV export and DB backup",
       os: "Windows",
-      requirements: "Windows 10 or later. Keyboard and mouse."
+      requirements: "Windows 10 version 1809 (build 17763) or later, or Windows 11. Keyboard and mouse."
     },
     erp: {
       id: "erp",
@@ -112,7 +112,7 @@ window.PLMOPS_CONFIG = {
       storeUrl: "",
       storeReady: false,
       storeComingSoon: "Microsoft Store link coming soon.",
-      price: "See Microsoft Store listing when published",
+      price: "$999.99 USD Professional (one-time; confirm when Store listing is live)",
       trial: "Free edition validates up to 100 records per worksheet and can export a sample report of up to 100 records. Paid edition removes that application-level record limit and unlocks corrected-file export, complete reports and saved reusable profiles.",
       screenshot: "assets/img/erp-validator-ui.png",
       ogImage: "assets/og/erp-migration-validator.png",
