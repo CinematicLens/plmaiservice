@@ -8,7 +8,7 @@ window.PLMOPS_CONFIG = {
 
   SITE_NAME: "PLM AI Services",
   SITE_URL: "https://plmaiservice.com",
-  SITE_TAGLINE: "Lean Consult for the shop floor. App PLM Products for engineering data on Windows.",
+  SITE_TAGLINE: "Windows products for engineering data. Lean Consult for the shop floor.",
   SUPPORT_EMAIL: "teamcentersap@gmail.com",
 
   YOUTUBE_CHANNEL_URL: "https://www.youtube.com/@PLMSAPAISolutions",
@@ -148,10 +148,9 @@ window.PLMOPS_CONFIG = {
       page: "erp-migration-validator.html",
       problem: "Validate ERP migration files and identify data-quality problems before upload.",
       description: "Validate Excel and CSV migration files, identify missing or invalid records, and improve ERP data quality before import with ERP Migration File Validator for Windows.",
-      storeUrl: "",
-      storeReady: false,
-      storeComingSoon: "Microsoft Store link coming soon.",
-      trial: "Free edition validates up to 100 records per worksheet and can export a sample report of up to 100 records. Professional edition removes that record limit and unlocks corrected-file export, complete reports and saved reusable profiles.",
+      storeUrl: "https://apps.microsoft.com/detail/9PPG63SQXCP6?hl=en-US&gl=IN",
+      storeReady: true,
+      trial: "See Microsoft Store for trial and licensing details. Free edition validates up to 100 records per worksheet; Professional edition unlocks full runs, corrected-file export and saved profiles.",
       screenshot: "assets/img/erp-validator-ui.png",
       ogImage: "assets/og/erp-migration-validator.png",
       demoUrl: "",
