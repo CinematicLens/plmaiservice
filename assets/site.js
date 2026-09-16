@@ -260,8 +260,9 @@
     }
 
     function mountSwitcher(){
-      const host = document.querySelector(".nav .cta") || document.querySelector(".nav-inner");
-      if (!host || host.querySelector(".lang-switch")) return;
+      if (document.querySelector(".lang-switch")) return;
+      const inner = document.querySelector(".nav-inner");
+      if (!inner) return;
       const wrap = document.createElement("label");
       wrap.className = "lang-switch";
       wrap.title = t("lang.label");
@@ -286,7 +287,12 @@
       });
       wrap.appendChild(sr);
       wrap.appendChild(sel);
-      host.appendChild(wrap);
+      // Always visible: sit before Menu toggle / CTA, not inside hidden .cta
+      const toggle = inner.querySelector(".nav-toggle");
+      const cta = inner.querySelector(".cta");
+      if (toggle) inner.insertBefore(wrap, toggle);
+      else if (cta) inner.insertBefore(wrap, cta);
+      else inner.appendChild(wrap);
     }
 
     document.documentElement.lang = lang;
