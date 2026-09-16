@@ -188,26 +188,50 @@
     });
   }
 
-  const contactForm = document.querySelector("#contactForm");
+    const contactForm = document.querySelector("#contactForm");
   if (contactForm) {
     const status = document.querySelector("#contactFormStatus");
     const btn = document.querySelector("#contactSubmitBtn");
     const endpoint = (cfg.FORM_ENDPOINT || "").trim();
+    const b2bEmail = (cfg.B2B_EMAIL || "sanjay@plmaiservice.com").trim();
+    if (!endpoint && btn) {
+      btn.textContent = "Open email to send";
+    }
     contactForm.addEventListener("submit", async function(e){
       e.preventDefault();
+      const fd = new FormData(contactForm);
+      const name = (fd.get("name") || "").toString().trim();
+      const company = (fd.get("company") || "").toString().trim();
+      const email = (fd.get("email") || "").toString().trim();
+      const topic = (fd.get("topic") || "").toString().trim();
+      const message = (fd.get("message") || "").toString().trim();
       if (!endpoint) {
-        if (status) status.textContent = "Form delivery is not configured yet. In assets/config.js set FORM_ENDPOINT to your Formspree form URL.";
+        const subject = "PLM AI Services — " + (topic || "website inquiry");
+        const body = [
+          "Name: " + name,
+          "Company: " + company,
+          "Email: " + email,
+          "Topic: " + topic,
+          "",
+          message
+        ].join("\r\n");
+        window.location.href = "mailto:" + b2bEmail +
+          "?subject=" + encodeURIComponent(subject) +
+          "&body=" + encodeURIComponent(body);
+        if (status) status.textContent = "Opening your email app to send to " + b2bEmail + "…";
+        track("click_demo_request", { topic: topic || "general", delivery: "mailto" });
         return;
       }
       btn.disabled = true;
       if (status) status.textContent = "Sending…";
       try {
-        const res = await fetch(endpoint, { method:"POST", body: new FormData(contactForm), headers:{ Accept:"application/json" }});
+        const res = await fetch(endpoint, { method:"POST", body: fd, headers:{ Accept:"application/json" }});
         if (!res.ok) throw new Error("fail");
         contactForm.reset();
         if (status) status.textContent = "Thank you. We will get back to you shortly.";
+        track("click_demo_request", { topic: topic || "general", delivery: "form" });
       } catch (_) {
-        if (status) status.textContent = "Could not send. Check FORM_ENDPOINT in assets/config.js or try again later.";
+        if (status) status.textContent = "Could not send. Email " + b2bEmail + " directly, or try again later.";
       } finally {
         btn.disabled = false;
       }
@@ -223,4 +247,23 @@
   bindFacebook();
   fillDynamicText();
   pageViewEvents();
+
+  (function prefillContactTopic(){
+    const sel = document.querySelector("#contactTopic");
+    if (!sel) return;
+    const topic = params.get("topic");
+    if (!topic) return;
+    const match = Array.prototype.find.call(sel.options, function(opt){
+      return opt.value.toLowerCase() === topic.toLowerCase() ||
+        opt.value.toLowerCase().indexOf(topic.toLowerCase()) >= 0;
+    });
+    if (match) sel.value = match.value;
+    else {
+      const opt = document.createElement("option");
+      opt.value = topic;
+      opt.textContent = topic;
+      opt.selected = true;
+      sel.appendChild(opt);
+    }
+  })();
 })();
