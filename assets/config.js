@@ -8,7 +8,7 @@ window.PLMOPS_CONFIG = {
 
   SITE_NAME: "PLM AI Services",
   SITE_URL: "https://plmaiservice.com",
-  SITE_TAGLINE: "B2B Windows tools for manufacturing and SAP data. Store apps and Lean Consult.",
+  SITE_TAGLINE: "B2B Windows tools with custom licensing. Store apps and Lean Consult separately.",
   SUPPORT_EMAIL: "teamcentersap@gmail.com",
   B2B_EMAIL: "sanjay@plmaiservice.com",
 
@@ -78,15 +78,17 @@ window.PLMOPS_CONFIG = {
       shortName: "BOM Compare",
       page: "bom-compare.html",
       problem: "Compare Source and Target BOM files and review Matched, Different and side-only rows.",
-      description: "Compare two Bills of Materials on Windows (CSV, Excel, JSON; PLMXML on Source). Validate BOMs locally; export CSV/PDF when your Store licence includes export.",
-      storeUrl: "https://apps.microsoft.com/detail/9nq1k3vh33kv?hl=en-US&gl=IN",
-      storeReady: true,
-      trial: "See Microsoft Store for trial and licensing details.",
+      description: "Compare two Bills of Materials on Windows (CSV, Excel, JSON; PLMXML on Source). Validate BOMs locally. Sold B2B with custom commercial terms — not Microsoft Store checkout.",
+      storeUrl: "",
+      storeReady: false,
+      storeComingSoon: "B2B sales — write to sanjay@plmaiservice.com",
+      salesModel: "b2b",
+      trial: "B2B licensing. Contact sanjay@plmaiservice.com for evaluation and commercial terms.",
       screenshot: "assets/img/bom-compare-ui.png",
       ogImage: "assets/og/bom-compare.png",
       demoUrl: "",
       demoTitle: "BOM Compare Tool Demo",
-      storeEvent: "click_bom_store",
+      storeEvent: "click_bom_b2b",
       viewEvent: "view_bom_compare",
       campaignHome: "website_home",
       campaignPage: "website_product_page",
@@ -94,7 +96,7 @@ window.PLMOPS_CONFIG = {
       benefits: [
         "Upload Source BOM and Target BOM, then Validate BOMs",
         "Review Matched, Different, Source-only and Target-only rows",
-        "Export CSV/PDF when entitled; processing stays on your PC"
+        "Local Windows processing; commercial terms by email"
       ],
       users: [
         "Manufacturing and product-data teams",
@@ -103,7 +105,7 @@ window.PLMOPS_CONFIG = {
         "Small and mid-size manufacturers"
       ],
       inputs: "CSV, Excel (.xlsx), JSON; PLMXML (Source BOM only); max 50 MB per file",
-      output: "Matched/Different/side-only results; CSV/PDF export when entitled",
+      output: "Matched/Different/side-only results; export when licensed",
       os: "Windows",
       requirements: "Windows 10 or later (x64). Keyboard and mouse."
     },
@@ -150,15 +152,17 @@ window.PLMOPS_CONFIG = {
       family: "plm",
       page: "erp-migration-validator.html",
       problem: "Validate ERP migration files and identify data-quality problems before upload.",
-      description: "Validate Excel and CSV migration files, identify missing or invalid records, and improve ERP data quality before import with ERP Migration File Validator for Windows.",
-      storeUrl: "https://apps.microsoft.com/detail/9PPG63SQXCP6?hl=en-US&gl=IN",
-      storeReady: true,
-      trial: "See Microsoft Store for trial and licensing details. Free edition validates up to 100 records per worksheet; Professional edition unlocks full runs, corrected-file export and saved profiles.",
+      description: "Validate Excel and CSV migration files locally before an ERP import. Sold B2B with custom commercial terms — not Microsoft Store checkout.",
+      storeUrl: "",
+      storeReady: false,
+      storeComingSoon: "B2B sales — write to sanjay@plmaiservice.com",
+      salesModel: "b2b",
+      trial: "B2B licensing. Contact sanjay@plmaiservice.com for evaluation and commercial terms.",
       screenshot: "assets/img/erp-validator-ui.png",
       ogImage: "assets/og/erp-migration-validator.png",
       demoUrl: "",
       demoTitle: "ERP Migration File Validator Demo",
-      storeEvent: "click_erp_store",
+      storeEvent: "click_erp_b2b",
       viewEvent: "view_erp_validator",
       campaignHome: "website_home",
       campaignPage: "website_product_page",
@@ -178,7 +182,7 @@ window.PLMOPS_CONFIG = {
         "Small and mid-sized companies preparing ERP imports"
       ],
       inputs: "CSV, XLSX and SpreadsheetML XML",
-      output: "Issue grid, XLSX audit report, and optional corrected sibling file (Professional edition)",
+      output: "Issue grid, XLSX audit report, and optional corrected sibling file when licensed",
       os: "Windows",
       requirements: "Windows 10 version 2004 (build 19041) or later, or Windows 11. Keyboard and mouse. Minimum usable resolution 1280 × 720. Works at 100%, 125%, 150% and 200% display scaling."
     },

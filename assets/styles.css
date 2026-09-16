@@ -229,3 +229,17 @@ textarea{min-height:140px;resize:vertical}
   html{scroll-behavior:auto}
   *{transition:none!important;animation:none!important}
 }
+
+.buy-paths{margin:28px 0}
+.buy-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+.buy-card{
+  background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px 22px;
+  box-shadow:var(--shadow);
+}
+.buy-card.primary{border-color:#c9a227;background:linear-gradient(180deg,#fffdf6 0%,#fff 55%)}
+.buy-label{margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+.buy-card h3{margin:0 0 8px;color:var(--navy);font-size:1.15rem}
+.buy-card .list{margin:10px 0 14px}
+@media (max-width:900px){
+  .buy-grid{grid-template-columns:1fr}
+}
