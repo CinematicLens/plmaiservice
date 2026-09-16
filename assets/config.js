@@ -8,8 +8,9 @@ window.PLMOPS_CONFIG = {
 
   SITE_NAME: "PLM AI Services",
   SITE_URL: "https://plmaiservice.com",
-  SITE_TAGLINE: "Windows products for engineering data. Lean Consult for the shop floor.",
+  SITE_TAGLINE: "B2B Windows tools for manufacturing and SAP data. Store apps and Lean Consult.",
   SUPPORT_EMAIL: "teamcentersap@gmail.com",
+  B2B_EMAIL: "sanjay@plmaiservice.com",
 
   YOUTUBE_CHANNEL_URL: "https://www.youtube.com/@PLMSAPAISolutions",
   FACEBOOK_GROUP_NAME: "PLM SAP Tool Room",
@@ -23,6 +24,8 @@ window.PLMOPS_CONFIG = {
     facebook_docrev: "facebook_docrev",
     facebook_erp_validator: "facebook_erp_validator",
     facebook_leanconsult: "facebook_leanconsult",
+    facebook_bapiload: "facebook_bapiload",
+    facebook_releaseguard: "facebook_releaseguard",
     instagram_bom_compare: "instagram_bom_compare",
     linkedin_bom_compare: "linkedin_bom_compare",
     youtube_bom_compare: "youtube_bom_compare",
@@ -178,6 +181,80 @@ window.PLMOPS_CONFIG = {
       output: "Issue grid, XLSX audit report, and optional corrected sibling file (Professional edition)",
       os: "Windows",
       requirements: "Windows 10 version 2004 (build 19041) or later, or Windows 11. Keyboard and mouse. Minimum usable resolution 1280 × 720. Works at 100%, 125%, 150% and 200% display scaling."
+    },
+    bapi: {
+      id: "bapi",
+      name: "BAPILoad Guard",
+      shortName: "BAPI Guard",
+      family: "b2b",
+      page: "bapiload-guard.html",
+      problem: "Validate Excel/CSV manufacturing data offline, then load through customer-authorized SAP remote functions.",
+      description: "B2B Windows workstation for SAP master-data analysts and consultants: validate Excel/CSV offline, map with declarative profiles, plan create/change/skip, then submit customer-allowlisted remote functions. Independent product — not affiliated with SAP SE. SAP .NET Connector is not included.",
+      storeUrl: "",
+      storeReady: false,
+      storeComingSoon: "B2B sales — write to sanjay@plmaiservice.com",
+      salesModel: "b2b",
+      trial: "B2B licensing. Contact sanjay@plmaiservice.com for evaluation and commercial terms.",
+      screenshot: "",
+      ogImage: "assets/og/home.png",
+      demoUrl: "",
+      demoTitle: "BAPILoad Guard Demo",
+      storeEvent: "click_bapi_b2b",
+      viewEvent: "view_bapiload_guard",
+      campaignHome: "website_home",
+      campaignPage: "website_product_page",
+      campaignFacebook: "facebook_bapiload",
+      benefits: [
+        "Offline Excel/CSV validation before any SAP call",
+        "Guided packs for manufacturing, commercial, PM and documents",
+        "Plan hash, checkpoints and verified/discrepant read-back"
+      ],
+      users: [
+        "SAP master-data analysts",
+        "Manufacturing engineers and buyers",
+        "SAP consultants on customer landscapes"
+      ],
+      inputs: "Excel and CSV workbooks; customer-supplied sapnco.dll in a folder you own",
+      output: "Validation plan, submit outcomes, Verified / Discrepant / Ambiguous / Not Checked",
+      os: "Windows 10 (22H2) and Windows 11 x64",
+      requirements: "Windows 10 22H2 or Windows 11 x64. Customer supplies compatible SAP .NET Connector DLLs. Independent of SAP certification."
+    },
+    releaseguard: {
+      id: "releaseguard",
+      name: "OrderRelease Guard",
+      shortName: "Release Guard",
+      family: "b2b",
+      page: "order-release-guard.html",
+      problem: "Catch revision, quantity, price, material and delivery differences between RFQ, quote and PO before release.",
+      description: "B2B Windows review workstation that compares RFQ, accepted quotation, customer PO and later revisions with source-linked discrepancies. A person still approves. Offline-first. Does not talk to ERP or auto-enter orders.",
+      storeUrl: "",
+      storeReady: false,
+      storeComingSoon: "B2B sales — write to sanjay@plmaiservice.com",
+      salesModel: "b2b",
+      trial: "B2B licensing. Contact sanjay@plmaiservice.com for evaluation and commercial terms.",
+      screenshot: "",
+      ogImage: "assets/og/home.png",
+      demoUrl: "",
+      demoTitle: "OrderRelease Guard Demo",
+      storeEvent: "click_releaseguard_b2b",
+      viewEvent: "view_order_release_guard",
+      campaignHome: "website_home",
+      campaignPage: "website_product_page",
+      campaignFacebook: "facebook_releaseguard",
+      benefits: [
+        "RFQ / quote / PO comparison with severity",
+        "SHA-256 evidence inventory; originals not modified",
+        "Human approval required; PDF report with hashes"
+      ],
+      users: [
+        "Manufacturing order-release teams",
+        "Estimating and contract review",
+        "Shop-floor release coordinators"
+      ],
+      inputs: "RFQ, quotation, PO and revision document packages",
+      output: "Discrepancy list, approval workflow, PDF evidence report",
+      os: "Windows 10/11 x64",
+      requirements: "Windows 10 or 11, 64-bit. Offline-first local processing."
     }
   }
 };

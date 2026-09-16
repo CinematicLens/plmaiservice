@@ -114,6 +114,11 @@ a:hover{text-decoration:underline}
 .hub-card h2{margin:0 0 8px;font-size:1.35rem;color:var(--navy)}
 .hub-card p{margin:0 0 14px;color:var(--muted)}
 .hub-card .store-badge{margin-bottom:10px}
+.store-badge{
+  display:inline-block;margin:0 0 4px;padding:4px 10px;border-radius:999px;
+  background:#e8f2fb;color:var(--navy);font-size:13px;font-weight:600;
+}
+.store-badge.b2b{background:#fff4e5;color:#8a4b00}
 .hub-card.lean{border-top:4px solid #1d1d1f}
 .hub-card.plm{border-top:4px solid var(--accent)}
 .hub-card .shot img{height:160px;object-fit:cover}

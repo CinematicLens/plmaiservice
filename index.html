@@ -15,7 +15,7 @@
   <meta name="twitter:title" content="Products &amp; Lean Consult | PLM AI Services"/>
   <meta name="twitter:description" content="LeanConsult Factory for iPhone/iPad. Products for Windows BOM, documents and ERP validation."/>
   <meta name="twitter:image" content="https://plmaiservice.com/assets/og/home.png"/>
-  <link rel="stylesheet" href="assets/styles.css?v=20260920"/>
+  <link rel="stylesheet" href="assets/styles.css?v=20260921"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-77043KQ3MP"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -82,10 +82,10 @@
       {
         "@type":"FAQPage",
         "mainEntity":[
-          {"@type":"Question","name":"What product lines does this site cover?","acceptedAnswer":{"@type":"Answer","text":"Two separate lines: Lean Consult (LeanConsult Factory on the App Store) and Products (BOM Compare Tool, DocRev Manager and ERP Migration File Validator on Microsoft Store / Windows)."}},
+          {"@type":"Question","name":"What does this site sell?","acceptedAnswer":{"@type":"Answer","text":"B2B: BAPILoad Guard and OrderRelease Guard via sanjay@plmaiservice.com. Microsoft Store: BOM Compare Tool, DocRev Manager and ERP Migration File Validator. Lean Consult: LeanConsult Factory on the App Store."}},
+          {"@type":"Question","name":"How do I buy BAPI Guard or Release Guard?","acceptedAnswer":{"@type":"Answer","text":"Email sanjay@plmaiservice.com for demos, evaluation and commercial terms."}},
           {"@type":"Question","name":"Where do I get LeanConsult Factory?","acceptedAnswer":{"@type":"Answer","text":"From the Apple App Store listing for LeanConsult Factory."}},
-          {"@type":"Question","name":"Where do I get Products?","acceptedAnswer":{"@type":"Answer","text":"BOM Compare Tool, DocRev Manager and ERP Migration File Validator are available on Microsoft Store."}},
-          {"@type":"Question","name":"Do you offer Teamcenter consulting on this site?","acceptedAnswer":{"@type":"Answer","text":"No. This website covers Lean Consult and Products software."}}
+          {"@type":"Question","name":"Where do I get Microsoft Store products?","acceptedAnswer":{"@type":"Answer","text":"BOM Compare Tool, DocRev Manager and ERP Migration File Validator are available on Microsoft Store."}}
         ]
       }
     ]
@@ -103,75 +103,76 @@
         <a data-nav href="bom-compare.html">BOM Compare</a>
         <a data-nav href="docrev-manager.html">DocRev Manager</a>
         <a data-nav href="erp-migration-validator.html">ERP Validator</a>
+        <a data-nav href="bapiload-guard.html">BAPI Guard</a>
+        <a data-nav href="order-release-guard.html">Release Guard</a>
         <a data-nav href="support.html">Support</a>
         <a data-nav href="leanconsult-factory.html">Lean Consult</a>
       </nav>
       <div class="cta">
-        <a class="btn" data-store="lean" data-campaign="website_home">LeanConsult</a>
-        <a class="btn primary" data-store="docrev" data-campaign="website_home">DocRev Manager</a>
+        <a class="btn" href="mailto:sanjay@plmaiservice.com">B2B email</a>
+        <a class="btn primary" href="#b2b-products">B2B Guards</a>
       </div>
     </div>
   </header>
 
   <main id="main" class="container">
     <section class="hero">
-      <p class="kicker">Two product lines · Windows Products · Lean Consult</p>
-      <h1 class="h-title">Shop-floor lean tools and Windows engineering data apps — kept separate on purpose.</h1>
-      <p class="h-sub">Choose a <strong>Windows product</strong> (BOM Compare, DocRev Manager, ERP Validator) or <strong>Lean Consult</strong> (LeanConsult Factory on iPhone and iPad).</p>
+      <p class="kicker">B2B Windows tools · Microsoft Store apps · Lean Consult</p>
+      <h1 class="h-title">Manufacturing and SAP data tools — Store apps for teams, B2B Guards for enterprise buyers.</h1>
+      <p class="h-sub"><strong>BAPILoad Guard</strong> and <strong>OrderRelease Guard</strong> are sold B2B — write to <a href="mailto:sanjay@plmaiservice.com">sanjay@plmaiservice.com</a>. Microsoft Store apps cover BOM, documents and ERP file checks. <strong>Lean Consult</strong> stays on its own page (last in the menu).</p>
       <div class="cta-row">
-        <a class="btn primary" href="#plm-products">Products</a>
-        <a class="btn primary" href="leanconsult-factory.html">Lean Consult</a>
+        <a class="btn primary" href="#b2b-products">B2B Guards</a>
+        <a class="btn primary" href="#plm-products">Store Products</a>
+        <a class="btn" href="leanconsult-factory.html">Lean Consult</a>
       </div>
     </section>
 
-    <div class="hub-grid" aria-label="Product lines">
-      <article class="hub-card lean">
-        <div class="shot" style="margin:-22px -22px 12px;border-radius:var(--radius) var(--radius) 0 0">
-          <img src="assets/img/leanconsult-how-it-works.png" width="1200" height="675" alt="LeanConsult Factory workflow — capture, describe, experiment, measure on the shop floor" loading="lazy"/>
-        </div>
-        <span class="store-badge">App Store · iPhone &amp; iPad</span>
-        <h2>Lean Consult</h2>
-        <p><strong>LeanConsult Factory</strong> — Kaizen waste &amp; 5S tools. Capture a workplace condition, describe it by voice, and get a cautious lean experiment — private, on this device.</p>
+    <h2 class="section-title" id="b2b-products">B2B products on this homepage</h2>
+    <p class="section-sub">Enterprise / B2B licensing. Email <a href="mailto:sanjay@plmaiservice.com">sanjay@plmaiservice.com</a> — we do not publish list prices here.</p>
+    <div class="hub-grid" aria-label="B2B products">
+      <article class="hub-card plm">
+        <span class="store-badge b2b">B2B · Featured</span>
+        <h2>BAPILoad Guard</h2>
+        <p>Validate Excel/CSV offline, then load manufacturing and commercial data through <strong>customer-authorized</strong> SAP remote functions. Independent Windows workstation — not affiliated with SAP SE. SAP .NET Connector is not included.</p>
         <ul class="list">
-          <li>One-shift trial with keep/revert rule</li>
-          <li>On-device history and PDF for huddles</li>
-          <li>Separate from Windows PLM apps</li>
+          <li>Offline validation before any SAP call</li>
+          <li>Declarative mapping packs (no scripts)</li>
+          <li>Plan hash, checkpoints, verified read-back</li>
         </ul>
         <div class="cta-row" style="margin-top:14px">
-          <a class="btn primary" data-store="lean" data-campaign="website_home">Get on the App Store</a>
-          <a class="btn" href="leanconsult-factory.html#how-to-use">How to use</a>
-          <a class="btn" href="leanconsult-factory.html">Lean Consult details</a>
+          <a class="btn primary" href="mailto:sanjay@plmaiservice.com?subject=BAPILoad%20Guard%20B2B%20inquiry">Email sanjay@plmaiservice.com</a>
+          <a class="btn" href="bapiload-guard.html">BAPI Guard details</a>
         </div>
       </article>
       <article class="hub-card plm">
-        <span class="store-badge">Microsoft Store · Windows</span>
-        <h2>Products</h2>
-        <p>Offline Windows apps for BOM comparison, drawing revision control and ERP migration-file validation. Install from Microsoft Store where a listing is live.</p>
+        <span class="store-badge b2b">B2B · Write to us</span>
+        <h2>OrderRelease Guard</h2>
+        <p>Catch revision, quantity, price, material and delivery differences between RFQ, accepted quote and customer PO before you release the job. Offline review; a person still approves.</p>
         <ul class="list">
-          <li>BOM Compare Tool</li>
-          <li>DocRev Manager</li>
-          <li>ERP Migration File Validator</li>
+          <li>RFQ / quote / PO discrepancy review</li>
+          <li>SHA-256 evidence inventory</li>
+          <li>Human approval + PDF report</li>
         </ul>
         <div class="cta-row" style="margin-top:14px">
-          <a class="btn primary" href="index.html#plm-products">View products</a>
-          <a class="btn" data-store="docrev" data-campaign="website_home">DocRev on Microsoft Store</a>
+          <a class="btn primary" href="mailto:sanjay@plmaiservice.com?subject=OrderRelease%20Guard%20B2B%20inquiry">Email sanjay@plmaiservice.com</a>
+          <a class="btn" href="order-release-guard.html">Release Guard details</a>
         </div>
       </article>
     </div>
 
     <section class="sales-strip" aria-labelledby="sales-path">
-      <h2 id="sales-path">Quick links</h2>
-      <p><strong>Products:</strong> DocRev Manager, BOM Compare Tool and ERP Migration File Validator on Microsoft Store. <strong>Lean Consult:</strong> App Store.</p>
+      <h2 id="sales-path">B2B contact</h2>
+      <p>For BAPILoad Guard and OrderRelease Guard, write to <strong>sanjay@plmaiservice.com</strong>. For Microsoft Store apps, open each Store listing. Lean Consult is on a separate page (last menu item).</p>
       <div class="cta-row">
-        <a class="btn primary" data-store="lean" data-campaign="website_home">LeanConsult on App Store</a>
+        <a class="btn primary" href="mailto:sanjay@plmaiservice.com">sanjay@plmaiservice.com</a>
         <a class="btn" data-store="docrev" data-campaign="website_home">DocRev on Microsoft Store</a>
         <a class="btn" data-store="bom" data-campaign="website_home">BOM Compare on Microsoft Store</a>
         <a class="btn" data-store="erp" data-campaign="website_home">ERP Validator on Microsoft Store</a>
       </div>
     </section>
 
-    <h2 class="section-title" id="plm-products">Products</h2>
-    <p class="section-sub">Three focused Windows applications. Separate from Lean Consult.</p>
+    <h2 class="section-title" id="plm-products">Microsoft Store products</h2>
+    <p class="section-sub">Three focused Windows applications available on Microsoft Store.</p>
     <div class="grid">
       <article class="card product-card span-4">
         <div class="shot">
@@ -261,6 +262,20 @@
             <td>Free sample edition; Professional for full runs</td>
             <td><a data-store="erp" data-campaign="website_home">Microsoft Store</a></td>
           </tr>
+          <tr>
+            <td><a href="bapiload-guard.html">BAPILoad Guard</a></td>
+            <td>Excel/CSV validate then SAP remote-function load (B2B)</td>
+            <td>Excel, CSV; customer-supplied NCo</td>
+            <td>Offline plan + allowlisted submit + read-back</td>
+            <td><a href="mailto:sanjay@plmaiservice.com?subject=BAPILoad%20Guard%20B2B%20inquiry">sanjay@plmaiservice.com</a></td>
+          </tr>
+          <tr>
+            <td><a href="order-release-guard.html">OrderRelease Guard</a></td>
+            <td>RFQ / quote / PO discrepancy before release (B2B)</td>
+            <td>RFQ, quote, PO, revision packages</td>
+            <td>Discrepancy review, human approval, PDF evidence</td>
+            <td><a href="mailto:sanjay@plmaiservice.com?subject=OrderRelease%20Guard%20B2B%20inquiry">sanjay@plmaiservice.com</a></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -268,20 +283,27 @@
     <h2 class="section-title">Who each product is for</h2>
     <div class="grid buyer-path">
       <div class="card span-4">
+        <h3>SAP load projects (B2B)</h3>
+        <p>Start with <strong>BAPILoad Guard</strong> — offline Excel/CSV validation, then customer-authorized remote functions.</p>
+        <a class="btn primary" href="mailto:sanjay@plmaiservice.com?subject=BAPILoad%20Guard%20B2B%20inquiry">Email sanjay@plmaiservice.com</a>
+      </div>
+      <div class="card span-4">
+        <h3>Order release teams (B2B)</h3>
+        <p>Start with <strong>OrderRelease Guard</strong> — RFQ / quote / PO differences before the shop floor.</p>
+        <a class="btn primary" href="mailto:sanjay@plmaiservice.com?subject=OrderRelease%20Guard%20B2B%20inquiry">Email sanjay@plmaiservice.com</a>
+      </div>
+      <div class="card span-4">
         <h3>Design offices &amp; machine builders</h3>
         <p>Start with <strong>DocRev Manager</strong> — numbering, vault and shop-floor control for drawings and documents.</p>
         <a class="btn primary" data-store="docrev" data-campaign="website_home">Get DocRev Manager</a>
       </div>
-      <div class="card span-4">
-        <h3>BOM / PLM export teams</h3>
-        <p>Start with <strong>BOM Compare Tool</strong> — Source vs Target validation before release. Compare locally; export when your Store licence includes it.</p>
-        <a class="btn primary" data-store="bom" data-campaign="website_home">Get BOM Compare</a>
-      </div>
-      <div class="card span-4">
-        <h3>Migration consultants</h3>
-        <p>Start with <strong>ERP Migration File Validator</strong> — catch bad rows before an ERP upload. Free sample edition; full runs on Professional.</p>
-        <a class="btn primary" data-store="erp" data-campaign="website_home">Get ERP Validator</a>
-      </div>
+    </div>
+
+    <h2 class="section-title" id="lean-consult">Lean Consult (separate page)</h2>
+    <p class="section-sub">LeanConsult Factory stays on its own page and is last in the site menu. Kaizen waste &amp; 5S tools for iPhone and iPad.</p>
+    <div class="cta-row">
+      <a class="btn primary" href="leanconsult-factory.html">Open Lean Consult page</a>
+      <a class="btn" data-store="lean" data-campaign="website_home">Get on the App Store</a>
     </div>
 
     <h2 class="section-title">Why engineering teams use these tools</h2>
@@ -347,31 +369,31 @@
     <h2 class="section-title">Frequently asked questions</h2>
     <div class="faq">
       <details>
-        <summary>What product lines does this site cover?</summary>
-        <p>Two separate lines: <strong>Lean Consult</strong> (LeanConsult Factory on the App Store) and <strong>Products</strong> (BOM Compare Tool, DocRev Manager and ERP Migration File Validator on Windows / Microsoft Store).</p>
+        <summary>What does this site sell?</summary>
+        <p><strong>B2B:</strong> BAPILoad Guard and OrderRelease Guard — write to <a href="mailto:sanjay@plmaiservice.com">sanjay@plmaiservice.com</a>. <strong>Microsoft Store:</strong> BOM Compare Tool, DocRev Manager, ERP Migration File Validator. <strong>Lean Consult:</strong> LeanConsult Factory on the App Store (separate page, last in the menu).</p>
+      </details>
+      <details>
+        <summary>How do I buy BAPI Guard or Release Guard?</summary>
+        <p>These are B2B products. Email <a href="mailto:sanjay@plmaiservice.com">sanjay@plmaiservice.com</a> for demos, evaluation and commercial terms. We do not publish list prices on this website.</p>
       </details>
       <details>
         <summary>Where do I get LeanConsult Factory?</summary>
-        <p>From the <a href="https://apps.apple.com/us/app/leanconsult-factory/id6794219819" target="_blank" rel="noopener noreferrer">Apple App Store</a>.</p>
+        <p>From the <a href="https://apps.apple.com/us/app/leanconsult-factory/id6794219819" target="_blank" rel="noopener noreferrer">Apple App Store</a>. Details: <a href="leanconsult-factory.html">Lean Consult page</a>.</p>
       </details>
       <details>
-        <summary>Where do I get Products?</summary>
+        <summary>Where do I get Microsoft Store products?</summary>
         <p>BOM Compare Tool, DocRev Manager and ERP Migration File Validator are available on Microsoft Store.</p>
-      </details>
-      <details>
-        <summary>Do you offer Teamcenter consulting on this site?</summary>
-        <p>No. This website covers Lean Consult and Products software.</p>
       </details>
     </div>
 
     <section class="repeat-cta" aria-labelledby="final-cta">
-      <h2 id="final-cta" class="section-title" style="margin-top:0">Choose your line</h2>
-      <p class="section-sub">Lean Consult on the App Store, or Products on Microsoft Store.</p>
+      <h2 id="final-cta" class="section-title" style="margin-top:0">Next step</h2>
+      <p class="section-sub">B2B Guards by email. Store apps from Microsoft Store. Lean Consult on its own page.</p>
       <div class="cta-row">
-        <a class="btn primary" data-store="lean" data-campaign="website_home">LeanConsult — App Store</a>
-        <a class="btn primary" data-store="docrev" data-campaign="website_home" data-trial>DocRev Manager — Microsoft Store</a>
+        <a class="btn primary" href="mailto:sanjay@plmaiservice.com">sanjay@plmaiservice.com</a>
+        <a class="btn primary" data-store="docrev" data-campaign="website_home" data-trial>DocRev — Microsoft Store</a>
         <a class="btn" data-store="bom" data-campaign="website_home">BOM Compare — Microsoft Store</a>
-        <a class="btn" data-store="erp" data-campaign="website_home">ERP Validator — Microsoft Store</a>
+        <a class="btn" href="leanconsult-factory.html">Lean Consult page</a>
       </div>
     </section>
   </main>
@@ -380,12 +402,14 @@
     <div class="container">
       <div>
         <strong>PLM AI Services</strong>
-        <p>Lean Consult for the shop floor. Products for engineering data on Windows.</p>
+        <p>B2B Windows tools, Microsoft Store apps, and Lean Consult.</p>
       </div>
       <div>
-        <h2>Lean Consult</h2>
+        <h2>B2B</h2>
         <ul>
-          <li><a href="leanconsult-factory.html">LeanConsult Factory</a></li>
+          <li><a href="bapiload-guard.html">BAPILoad Guard</a></li>
+          <li><a href="order-release-guard.html">OrderRelease Guard</a></li>
+          <li><a href="mailto:sanjay@plmaiservice.com">sanjay@plmaiservice.com</a></li>
         </ul>
       </div>
       <div>
@@ -394,7 +418,12 @@
           <li><a href="bom-compare.html">BOM Compare Tool</a></li>
           <li><a href="docrev-manager.html">DocRev Manager</a></li>
           <li><a href="erp-migration-validator.html">ERP Migration File Validator</a></li>
-          <li><a href="#plm-products">Products</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Lean Consult</h2>
+        <ul>
+          <li><a href="leanconsult-factory.html">LeanConsult Factory</a></li>
         </ul>
       </div>
       <div>
@@ -417,7 +446,7 @@
       <div class="site-legal">© 2026 PLM AI Services. Independent software. Not affiliated with SAP, Microsoft or Apple.</div>
     </div>
   </footer>
-  <script src="assets/config.js?v=20260920"></script>
-  <script src="assets/site.js?v=20260920"></script>
+  <script src="assets/config.js?v=20260921"></script>
+  <script src="assets/site.js?v=20260921"></script>
 </body>
 </html>

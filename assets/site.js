@@ -180,6 +180,11 @@
         el.href = "mailto:" + (cfg.SUPPORT_EMAIL || cfg.TO_EMAIL);
         if (!el.textContent.trim()) el.textContent = cfg.SUPPORT_EMAIL || cfg.TO_EMAIL;
       }
+      if (key === "b2b-email") {
+        const addr = cfg.B2B_EMAIL || "sanjay@plmaiservice.com";
+        el.href = "mailto:" + addr + (el.getAttribute("data-subject") ? ("?subject=" + encodeURIComponent(el.getAttribute("data-subject"))) : "");
+        if (!el.textContent.trim()) el.textContent = addr;
+      }
     });
   }
 
