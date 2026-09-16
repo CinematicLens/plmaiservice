@@ -188,118 +188,36 @@
     });
   }
 
-  function initI18n(){
-    const pack = window.PLMOPS_I18N;
-    if (!pack || !pack.strings) return;
-    const supported = (pack.langs || []).map(function(l){ return l.code; });
-    const stored = (localStorage.getItem("plmops_lang") || "").toLowerCase();
-    const fromQuery = (params.get("lang") || "").toLowerCase();
-    let lang = fromQuery || stored || pack.defaultLang || "en";
-    if (supported.indexOf(lang) < 0) lang = pack.defaultLang || "en";
+  function initBrowserTranslate(){
+    if (document.getElementById("google_translate_element")) return;
+    const inner = document.querySelector(".nav-inner");
+    if (!inner) return;
 
-    function t(key){
-      const table = pack.strings[lang] || pack.strings.en || {};
-      const en = pack.strings.en || {};
-      return table[key] != null ? table[key] : (en[key] != null ? en[key] : key);
-    }
+    const wrap = document.createElement("div");
+    wrap.className = "lang-switch";
+    wrap.id = "google_translate_element";
+    wrap.setAttribute("aria-label", "Translate this page");
 
-    function applyText(el, key){
-      if (!el || !key) return;
-      const val = t(key);
-      if (el.hasAttribute("data-i18n-html")) el.innerHTML = val;
-      else el.textContent = val;
-    }
+    const toggle = inner.querySelector(".nav-toggle");
+    const cta = inner.querySelector(".cta");
+    if (toggle) inner.insertBefore(wrap, toggle);
+    else if (cta) inner.insertBefore(wrap, cta);
+    else inner.appendChild(wrap);
 
-    function mapChrome(){
-      document.querySelectorAll("a.skip").forEach(function(el){ applyText(el, "skip"); });
-      document.querySelectorAll(".brand small").forEach(function(el){ applyText(el, "brand.tag"); });
-      document.querySelectorAll(".nav-toggle").forEach(function(el){ applyText(el, "nav.menu"); });
+    window.googleTranslateElementInit = function(){
+      if (!window.google || !google.translate || !google.translate.TranslateElement) return;
+      new google.translate.TranslateElement({
+        pageLanguage: "en",
+        includedLanguages: "en,de,hi,fr,es,pt,zh-CN,ja,ar,it,nl,ko,ru,ta,te,mr,bn,gu,kn,pa",
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay: false
+      }, "google_translate_element");
+    };
 
-      document.querySelectorAll(".nav-links a").forEach(function(el){
-        const href = (el.getAttribute("href") || "").trim();
-        if (/bapiload-guard\.html/i.test(href)) applyText(el, "nav.bapi");
-        else if (/order-release-guard\.html/i.test(href)) applyText(el, "nav.release");
-        else if (/#store-apps/i.test(href)) applyText(el, "nav.store");
-        else if (/support\.html/i.test(href)) applyText(el, "nav.support");
-        else if (/leanconsult-factory\.html/i.test(href)) applyText(el, "nav.lean");
-      });
-
-      document.querySelectorAll(".nav .cta a.btn").forEach(function(el){
-        const href = el.getAttribute("href") || "";
-        if (/mailto:/i.test(href)) applyText(el, "nav.email");
-        else if (/#request-demo|contact\.html/i.test(href) || /demo/i.test(el.textContent || "")) applyText(el, "nav.demo");
-      });
-
-      document.querySelectorAll(".footer h2").forEach(function(el){
-        const raw = (el.getAttribute("data-i18n-src") || el.textContent || "").trim();
-        if (!el.getAttribute("data-i18n-src")) el.setAttribute("data-i18n-src", raw);
-        const src = el.getAttribute("data-i18n-src");
-        const map = {
-          "B2B": "footer.b2b",
-          "Microsoft Store": "footer.ms",
-          "Lean Consult": "footer.lean",
-          "Company": "footer.company",
-          "Resources": "footer.resources"
-        };
-        if (map[src]) applyText(el, map[src]);
-      });
-      document.querySelectorAll(".footer a[href='about.html']").forEach(function(el){ applyText(el, "footer.about"); });
-      document.querySelectorAll(".footer a[href='support.html']").forEach(function(el){ applyText(el, "footer.support"); });
-      document.querySelectorAll(".footer a[href='contact.html']").forEach(function(el){ applyText(el, "footer.contact"); });
-      document.querySelectorAll(".footer a[href='privacy.html']").forEach(function(el){ applyText(el, "footer.privacy"); });
-      document.querySelectorAll(".footer a[href='terms.html']").forEach(function(el){ applyText(el, "footer.terms"); });
-      document.querySelectorAll('.footer a[data-config="youtube"]').forEach(function(el){ applyText(el, "footer.youtube"); });
-      document.querySelectorAll(".footer .container > div:first-child p").forEach(function(el){ applyText(el, "footer.blurb"); });
-      document.querySelectorAll(".site-legal").forEach(function(el){ applyText(el, "footer.legal"); });
-    }
-
-    function applyMarked(){
-      document.querySelectorAll("[data-i18n]").forEach(function(el){
-        applyText(el, el.getAttribute("data-i18n"));
-      });
-    }
-
-    function mountSwitcher(){
-      if (document.querySelector(".lang-switch")) return;
-      const inner = document.querySelector(".nav-inner");
-      if (!inner) return;
-      const wrap = document.createElement("label");
-      wrap.className = "lang-switch";
-      wrap.title = t("lang.label");
-      const sr = document.createElement("span");
-      sr.className = "sr-only";
-      sr.textContent = t("lang.label");
-      const sel = document.createElement("select");
-      sel.setAttribute("aria-label", t("lang.label"));
-      (pack.langs || []).forEach(function(l){
-        const opt = document.createElement("option");
-        opt.value = l.code;
-        opt.textContent = l.short || l.label;
-        opt.title = l.label;
-        if (l.code === lang) opt.selected = true;
-        sel.appendChild(opt);
-      });
-      sel.addEventListener("change", function(){
-        localStorage.setItem("plmops_lang", sel.value);
-        const url = new URL(location.href);
-        url.searchParams.set("lang", sel.value);
-        location.href = url.toString();
-      });
-      wrap.appendChild(sr);
-      wrap.appendChild(sel);
-      // Always visible: sit before Menu toggle / CTA, not inside hidden .cta
-      const toggle = inner.querySelector(".nav-toggle");
-      const cta = inner.querySelector(".cta");
-      if (toggle) inner.insertBefore(wrap, toggle);
-      else if (cta) inner.insertBefore(wrap, cta);
-      else inner.appendChild(wrap);
-    }
-
-    document.documentElement.lang = lang;
-    localStorage.setItem("plmops_lang", lang);
-    mapChrome();
-    applyMarked();
-    mountSwitcher();
+    const s = document.createElement("script");
+    s.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+    s.async = true;
+    document.head.appendChild(s);
   }
 
   const contactForm = document.querySelector("#contactForm");
@@ -361,7 +279,7 @@
   bindFacebook();
   fillDynamicText();
   pageViewEvents();
-  initI18n();
+  initBrowserTranslate();
 
   (function prefillContactTopic(){
     const sel = document.querySelector("#contactTopic");
