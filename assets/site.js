@@ -6,7 +6,7 @@
   const utmSource = (params.get("utm_source") || "").toLowerCase();
   const utmMedium = (params.get("utm_medium") || "").toLowerCase();
   const utmCampaign = params.get("utm_campaign") || "";
-  const ASSET_V = "20260917form";
+  const ASSET_V = "20260917noprice";
 
   function track(name, extra){
     const payload = Object.assign({
@@ -87,7 +87,6 @@
         '<nav class="nav-links" id="primary-nav" aria-label="Primary">' +
           '<a data-nav href="products.html">Products</a>' +
           '<a data-nav href="solutions.html">Solutions</a>' +
-          '<a data-nav href="pricing.html">Pricing</a>' +
           '<a data-nav href="demos.html">Demo Videos</a>' +
           '<a data-nav href="about.html">About</a>' +
           '<a data-nav href="contact.html">Contact</a>' +
@@ -104,7 +103,7 @@
       '<div class="container">' +
         '<div>' +
           '<strong>PLM AI Services</strong>' +
-          '<p class="brand-blurb">Affordable BOM and ERP data tools for manufacturers worldwide—including the USA, India, Europe and other markets. Windows software for BOM compare, ERP migration validation and document revision control.</p>' +
+          '<p class="brand-blurb">BOM and ERP data tools for manufacturers worldwide—including the USA, India, Europe and other markets. Windows software for BOM compare, ERP migration validation and document revision control.</p>' +
           '<p class="brand-blurb">Sales &amp; support: use the <a href="contact.html#contact-form">demo request form</a>. We reply by email after you submit.</p>' +
         '</div>' +
         '<div>' +
@@ -123,7 +122,6 @@
           '<ul>' +
             '<li><a href="about.html">About</a></li>' +
             '<li><a href="solutions.html">Solutions</a></li>' +
-            '<li><a href="pricing.html">Pricing</a></li>' +
             '<li><a href="contact.html">Contact</a></li>' +
             '<li><a href="support.html">Support</a></li>' +
           '</ul>' +

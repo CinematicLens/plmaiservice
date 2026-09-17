@@ -10,7 +10,7 @@ window.PLMOPS_CONFIG = {
 
   SITE_NAME: "PLM AI Services",
   SITE_URL: "https://plmaiservice.com",
-  SITE_TAGLINE: "Affordable BOM and ERP data tools for manufacturers worldwide",
+  SITE_TAGLINE: "BOM and ERP data tools for manufacturers worldwide",
   SUPPORT_EMAIL: "teamcentersap@gmail.com",
   B2B_EMAIL: "sanjay@plmaiservice.com",
 
@@ -18,8 +18,8 @@ window.PLMOPS_CONFIG = {
   WHATSAPP_URL: "",
   /* Set true only if you can issue GST invoices for India B2B sales. */
   GST_INVOICE_AVAILABLE: true,
-  CURRENCY_PRIMARY: "USD",
-  CURRENCY_NOTE: "Quotations in USD, INR or another agreed currency",
+  CURRENCY_PRIMARY: "",
+  CURRENCY_NOTE: "",
 
   YOUTUBE_CHANNEL_URL: "https://www.youtube.com/@PLMSAPAISolutions",
   FACEBOOK_GROUP_NAME: "PLM SAP Tool Room",
