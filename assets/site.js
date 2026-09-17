@@ -6,7 +6,7 @@
   const utmSource = (params.get("utm_source") || "").toLowerCase();
   const utmMedium = (params.get("utm_medium") || "").toLowerCase();
   const utmCampaign = params.get("utm_campaign") || "";
-  const ASSET_V = "20260916in";
+  const ASSET_V = "20260917ww";
 
   function track(name, extra){
     const payload = Object.assign({
@@ -82,7 +82,7 @@
   function navHtml(){
     return (
       '<div class="nav-inner">' +
-        '<a class="brand" href="index.html">PLM AI Services<small>Manufacturing data tools · India</small></a>' +
+        '<a class="brand" href="index.html">PLM AI Services<small>Manufacturing data tools · Worldwide</small></a>' +
         '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>' +
         '<nav class="nav-links" id="primary-nav" aria-label="Primary">' +
           '<a data-nav href="products.html">Products</a>' +
@@ -106,7 +106,7 @@
       '<div class="container">' +
         '<div>' +
           '<strong>PLM AI Services</strong>' +
-          '<p class="brand-blurb">Affordable BOM and ERP data tools for Indian manufacturers. Windows software for BOM compare, ERP migration validation and document revision control.</p>' +
+          '<p class="brand-blurb">Affordable BOM and ERP data tools for manufacturers worldwide—including the USA, India, Europe and other markets. Windows software for BOM compare, ERP migration validation and document revision control.</p>' +
           '<p class="brand-blurb">Sales: <a href="mailto:' + b2b + '">' + b2b + '</a><br/>Support: <a href="mailto:' + support + '">' + support + '</a></p>' +
         '</div>' +
         '<div>' +
@@ -147,7 +147,7 @@
             '<li data-facebook-community hidden><a data-facebook-community>Join PLM SAP Tool Room</a></li>' +
           '</ul>' +
         '</div>' +
-        '<div class="site-legal">© 2026 PLM AI Services. Independent software. Not affiliated with SAP SE, Microsoft or Apple. GST and registered-company details: confirm with sales before citing on purchase orders.</div>' +
+        '<div class="site-legal">© 2026 PLM AI Services. Independent software. Not affiliated with SAP SE, Microsoft or Apple. Invoice and tax details (including GST where applicable): confirm with sales before citing on purchase orders.</div>' +
       '</div>'
     );
   }

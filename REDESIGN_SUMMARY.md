@@ -1,6 +1,6 @@
 # India SME website redesign — implementation notes
 
-Static HTML site retargeted to Indian manufacturing SMEs (20–200 employees).
+Static HTML site retargeted to manufacturing SMEs worldwide (20–200 employees).
 
 ## Framework
 Static HTML/CSS/JS on GitHub Pages (`CNAME` = plmaiservice.com). No build toolchain.

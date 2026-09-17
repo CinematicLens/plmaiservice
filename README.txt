@@ -1,7 +1,7 @@
 PLM AI Services – static product website (GitHub Pages)
 
-Primary audience: Indian manufacturing SMEs (approx. 20–200 employees)
-Primary message: Affordable BOM and ERP Data Tools for Indian Manufacturers
+Primary audience: manufacturing SMEs worldwide (approx. 20–200 employees)
+Primary message: Affordable BOM and ERP Data Tools for Manufacturers Worldwide
 
 Products (priority)
 1. BOM Compare Tool — B2B demo
