@@ -6,7 +6,7 @@
   const utmSource = (params.get("utm_source") || "").toLowerCase();
   const utmMedium = (params.get("utm_medium") || "").toLowerCase();
   const utmCampaign = params.get("utm_campaign") || "";
-  const ASSET_V = "20260917feat";
+  const ASSET_V = "20260917form";
 
   function track(name, extra){
     const payload = Object.assign({
@@ -100,14 +100,12 @@
   }
 
   function footerHtml(){
-    const b2b = cfg.B2B_EMAIL || "sanjay@plmaiservice.com";
-    const support = cfg.SUPPORT_EMAIL || cfg.TO_EMAIL || b2b;
     return (
       '<div class="container">' +
         '<div>' +
           '<strong>PLM AI Services</strong>' +
           '<p class="brand-blurb">Affordable BOM and ERP data tools for manufacturers worldwide—including the USA, India, Europe and other markets. Windows software for BOM compare, ERP migration validation and document revision control.</p>' +
-          '<p class="brand-blurb">Sales: <a href="mailto:' + b2b + '">' + b2b + '</a><br/>Support: <a href="mailto:' + support + '">' + support + '</a></p>' +
+          '<p class="brand-blurb">Sales &amp; support: use the <a href="contact.html#contact-form">demo request form</a>. We reply by email after you submit.</p>' +
         '</div>' +
         '<div>' +
           '<h2>Products</h2>' +
@@ -292,14 +290,12 @@
     document.querySelectorAll("[data-config]").forEach(function(el){
       const key = el.getAttribute("data-config");
       if (key === "youtube") el.href = cfg.YOUTUBE_CHANNEL_URL;
-      if (key === "email") {
-        el.href = "mailto:" + (cfg.SUPPORT_EMAIL || cfg.TO_EMAIL);
-        if (!el.textContent.trim()) el.textContent = cfg.SUPPORT_EMAIL || cfg.TO_EMAIL;
-      }
-      if (key === "b2b-email") {
-        const addr = cfg.B2B_EMAIL || "sanjay@plmaiservice.com";
-        el.href = "mailto:" + addr + (el.getAttribute("data-subject") ? ("?subject=" + encodeURIComponent(el.getAttribute("data-subject"))) : "");
-        if (!el.textContent.trim()) el.textContent = addr;
+      if (key === "email" || key === "b2b-email") {
+        const topic = el.getAttribute("data-subject") || el.getAttribute("data-topic") || "";
+        el.href = "contact.html" + (topic ? ("?topic=" + encodeURIComponent(topic)) : "") + "#contact-form";
+        if (!el.textContent.trim() || /@/.test(el.textContent)) {
+          el.textContent = el.getAttribute("data-label") || "Request via form";
+        }
       }
     });
   }
@@ -379,10 +375,7 @@
     const btn = document.querySelector("#contactSubmitBtn");
     const success = document.querySelector("#contactFormSuccess");
     const endpoint = (cfg.FORM_ENDPOINT || "").trim();
-    const b2bEmail = (cfg.B2B_EMAIL || "sanjay@plmaiservice.com").trim();
-    if (!endpoint && btn) {
-      btn.textContent = "Open email to send";
-    }
+    if (btn) btn.textContent = "Submit request";
 
     contactForm.addEventListener("submit", async function(e){
       e.preventDefault();
@@ -395,7 +388,6 @@
       const city = (fd.get("city") || "").toString().trim();
       const topic = (fd.get("topic") || fd.get("product") || "").toString().trim();
       const message = (fd.get("message") || fd.get("problem") || "").toString().trim();
-      const demoTime = (fd.get("demo_time") || "").toString().trim();
       const consent = fd.get("consent");
 
       let ok = true;
@@ -428,28 +420,10 @@
       }
 
       if (!endpoint) {
-        const subject = "PLM AI Services — Demo request: " + topic;
-        const body = [
-          "Name: " + name,
-          "Company: " + company,
-          "Work email: " + email,
-          "Phone/WhatsApp: " + phone,
-          "City: " + city,
-          "Product: " + topic,
-          "Preferred demo time: " + (demoTime || "Not specified"),
-          "",
-          "Current problem:",
-          message
-        ].join("\r\n");
-        window.location.href = "mailto:" + b2bEmail +
-          "?subject=" + encodeURIComponent(subject) +
-          "&body=" + encodeURIComponent(body);
-        if (status) status.textContent = "Opening your email app to send to " + b2bEmail + "…";
-        if (success) {
-          success.classList.add("is-visible");
-          success.textContent = "If your email app did not open, write to " + b2bEmail + " with the same details.";
+        if (status) {
+          status.textContent = "Form delivery is not configured yet. Set FORM_ENDPOINT in assets/config.js (Formspree or similar). Mail apps are not opened from this site.";
         }
-        track("click_demo_request", { topic: topic || "general", delivery: "mailto" });
+        track("click_demo_request", { topic: topic || "general", delivery: "blocked_no_endpoint" });
         return;
       }
 
@@ -467,7 +441,7 @@
         }
         track("click_demo_request", { topic: topic || "general", delivery: "form" });
       } catch (_) {
-        if (status) status.textContent = "Could not send. Email " + b2bEmail + " directly, or try again later.";
+        if (status) status.textContent = "Could not send. Please try again in a few minutes, or use the form later.";
       } finally {
         if (btn) btn.disabled = false;
       }

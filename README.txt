@@ -21,4 +21,6 @@ Configuration (assets/config.js)
 - B2B_EMAIL / SUPPORT_EMAIL / store URLs / YouTube channel
 
 Contact form
-- With FORM_ENDPOINT empty, submit opens mailto to B2B_EMAIL with validated fields.
+- All enquiries go through contact.html (no mailto links on the site).
+- Set assets/config.js FORM_ENDPOINT to a Formspree (or similar) URL so submissions are delivered.
+- Until FORM_ENDPOINT is set, the form validates fields but does not open a mail app.

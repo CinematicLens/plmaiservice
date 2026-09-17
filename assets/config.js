@@ -4,6 +4,8 @@
  */
 window.PLMOPS_CONFIG = {
   FORM_ENDPOINT: "",
+  /* Required for the contact form to deliver requests. Example Formspree: https://formspree.io/f/xxxxxxxx
+     Until set, the form validates but does not open a mail app and shows a configuration message. */
   TO_EMAIL: "teamcentersap@gmail.com",
 
   SITE_NAME: "PLM AI Services",
