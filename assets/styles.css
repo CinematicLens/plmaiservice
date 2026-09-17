@@ -94,8 +94,55 @@ a:hover{text-decoration:underline}
 }
 
 /* —— Hero —— */
-.hero{padding:40px 0 20px}
-.hero-compact{padding:28px 0 10px}
+/* —— Page hero banner —— */
+.page-hero{
+  position:relative;margin:0 0 28px;border-radius:14px;overflow:hidden;
+  background:linear-gradient(125deg,#0a2540 0%,#123a5c 48%,#1a5f9e 100%);
+  color:#fff;box-shadow:var(--shadow);
+}
+.page-hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 80% at 90% 20%, rgba(255,255,255,.12), transparent 55%),
+    linear-gradient(180deg, transparent 40%, rgba(10,37,64,.35) 100%);
+  pointer-events:none;
+}
+.page-hero-inner{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;
+  padding:36px 32px 32px;
+}
+.page-hero .kicker{color:#9ec5e8;margin-bottom:10px}
+.page-hero .h-title{color:#fff;margin:0 0 12px;font-size:clamp(26px,3.5vw,38px)}
+.page-hero .h-sub{color:rgba(255,255,255,.88);margin:0 0 18px;max-width:520px}
+.page-hero .cta-row .btn{
+  background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.45);
+}
+.page-hero .cta-row .btn:hover{background:rgba(255,255,255,.18);border-color:#fff}
+.page-hero .cta-row .btn.primary{
+  background:#fff;color:var(--navy);border-color:#fff;
+}
+.page-hero .cta-row .btn.primary:hover{background:#e8f1f8;border-color:#e8f1f8}
+.page-hero-visual{
+  border-radius:10px;overflow:hidden;border:1px solid rgba(255,255,255,.2);
+  box-shadow:0 16px 40px rgba(0,0,0,.28);background:#0c1f33;
+}
+.page-hero-visual img{
+  width:100%;height:auto;display:block;max-height:280px;object-fit:cover;object-position:top center;
+}
+.page-hero-meta{
+  display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;padding:0;list-style:none;
+}
+.page-hero-meta li{
+  font-size:12px;font-weight:600;color:#d7e8f6;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;padding:5px 10px;
+}
+@media (max-width:900px){
+  .page-hero-inner{grid-template-columns:1fr;padding:28px 20px 22px}
+  .page-hero-visual img{max-height:200px}
+}
+
 .hero-panel{
   display:grid;grid-template-columns:1.15fr .85fr;gap:28px;align-items:center;
 }
