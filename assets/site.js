@@ -6,7 +6,7 @@
   const utmSource = (params.get("utm_source") || "").toLowerCase();
   const utmMedium = (params.get("utm_medium") || "").toLowerCase();
   const utmCampaign = params.get("utm_campaign") || "";
-  const ASSET_V = "20260917ww";
+  const ASSET_V = "20260917feat";
 
   function track(name, extra){
     const payload = Object.assign({

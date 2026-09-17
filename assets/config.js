@@ -64,9 +64,14 @@ window.PLMOPS_CONFIG = {
       campaignPage: "website_product_page",
       campaignFacebook: "facebook_leanconsult",
       benefits: [
+        "Capture a workplace photo plus spoken or typed description",
+        "On-device speech transcription; audio not kept after transcription",
         "One clear problem framing and a reversible one-shift trial",
-        "Before/after measurement rows and an action board for next shifts",
-        "Encrypted on-device history and PDF export for huddles"
+        "Success metric and keep/revert rule",
+        "Before/after measurement rows and chart when you enter numbers",
+        "Action board for follow-up on next shifts",
+        "Encrypted on-device history; optional PDF export for huddles",
+        "No account and no Lean Consult cloud backend for analysis"
       ],
       users: [
         "Production supervisors",
@@ -105,8 +110,14 @@ window.PLMOPS_CONFIG = {
       campaignFacebook: "facebook_bom_compare",
       benefits: [
         "Upload Source BOM and Target BOM, then Validate BOMs",
-        "Review Matched, Different, Source-only and Target-only rows",
-        "Local Windows processing; commercial terms by email"
+        "Summary filters: Matched, Different, Source-only, Target-only",
+        "Side-by-side field values including quantity differences",
+        "Column mapping review — see what was compared vs ignored",
+        "Search, column picker, row detail and ignored-item review",
+        "Optional mapping presets / Mapping Manager when licensed",
+        "CSV or PDF export when entitled under your B2B licence",
+        "CSV, Excel (.xlsx), JSON; PLMXML on Source; max 50 MB per file",
+        "Runs locally on Windows — BOM files are not uploaded to our servers"
       ],
       users: [
         "Manufacturing and product-data teams",
@@ -143,9 +154,16 @@ window.PLMOPS_CONFIG = {
       campaignPage: "website_product_page",
       campaignFacebook: "facebook_docrev",
       benefits: [
-        "Automatic numbering and revision history in a local vault",
-        "Transmittal ZIP, shop floor and job packet workflows",
-        "Search, CSV export and one-click database backup — offline"
+        "Automatic numbering with configurable project patterns",
+        "Revision history (A, B, C…) with a clear current revision",
+        "Statuses: Draft, Review, Released, Obsolete with filters",
+        "Local vault per project; drag-and-drop and Import folder",
+        "Check-out / check-in, owner, reason-for-change and audit trail",
+        "Transmittal ZIP (cover sheet + issued revisions)",
+        "Shop floor mode and job packet / traveler for Released copies",
+        "Search with wildcards; CSV export; one-click database backup",
+        "Duplicate-file warning by checksum; fully offline on this PC",
+        "Vault PDF, DWG/DXF, Solid Edge, STEP/STP, Office, PNG, JPG and more"
       ],
       users: [
         "Design offices and machine builders",
@@ -184,9 +202,15 @@ window.PLMOPS_CONFIG = {
       campaignPage: "website_product_page",
       campaignFacebook: "facebook_erp_validator",
       benefits: [
-        "Check CSV, XLSX and SpreadsheetML XML files on this PC",
-        "Find missing, invalid, duplicate and out-of-range values",
-        "Export an audit report without overwriting the original file"
+        "Validate CSV, XLSX and SpreadsheetML XML on this PC",
+        "Required-field, data-type, duplicate and allowed-value checks",
+        "Date and number validation, ranges and control totals",
+        "Parent/child checks and searchable issue grid",
+        "Error export as XLSX audit report (does not overwrite source)",
+        "Suggested fixes shown with original and corrected values",
+        "Reusable JSON validation profiles",
+        "Professional edition: optional corrected sibling file export",
+        "No telemetry; processing stays on the local Windows device"
       ],
       users: [
         "ERP migration teams",
@@ -228,9 +252,16 @@ window.PLMOPS_CONFIG = {
       campaignPage: "website_product_page",
       campaignFacebook: "facebook_bapiload",
       benefits: [
-        "Offline Excel/CSV validation before any SAP call",
-        "Guided packs for manufacturing, commercial, PM and documents",
-        "Plan hash, checkpoints and verified/discrepant read-back"
+        "Offline Excel/CSV validation before any SAP network call",
+        "Declarative JSON column mapping (no scripts)",
+        "Transparent Create / Change / Skip execution plan",
+        "Guided packs: manufacturing, commercial, PM and documents",
+        "Sales Order and master-data load workflows",
+        "Submit only customer-allowlisted remote-enabled functions",
+        "Plan hash binds approval; batch checkpoints",
+        "Read-back classification: Verified, Discrepant, Ambiguous, Not Checked",
+        "Timeouts treated as unknown — no silent risky retries",
+        "Independent product — not affiliated with SAP SE; sapnco.dll not included"
       ],
       users: [
         "SAP master-data analysts",
@@ -268,9 +299,13 @@ window.PLMOPS_CONFIG = {
       campaignPage: "website_product_page",
       campaignFacebook: "facebook_releaseguard",
       benefits: [
-        "RFQ / quote / PO comparison with severity",
+        "RFQ / accepted quote / customer PO comparison with severity",
+        "Revision, quantity, price, material and delivery differences",
+        "Source-linked discrepancies for review before release",
         "SHA-256 evidence inventory; originals not modified",
-        "Human approval required; PDF report with hashes"
+        "Local offline-first review projects on Windows",
+        "Human approval required — does not auto-enter ERP orders",
+        "PDF report with document hashes and disclaimer"
       ],
       users: [
         "Manufacturing order-release teams",
