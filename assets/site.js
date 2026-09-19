@@ -6,7 +6,32 @@
   const utmSource = (params.get("utm_source") || "").toLowerCase();
   const utmMedium = (params.get("utm_medium") || "").toLowerCase();
   const utmCampaign = params.get("utm_campaign") || "";
-  const ASSET_V = "20260917hero";
+  const ASSET_V = "20260919theme";
+  const THEME_KEY = "plm-theme";
+
+  function getTheme(){
+    const saved = localStorage.getItem(THEME_KEY);
+    if (saved === "light" || saved === "dark") return saved;
+    return "dark";
+  }
+
+  function applyTheme(theme){
+    const t = theme === "light" ? "light" : "dark";
+    document.documentElement.setAttribute("data-theme", t);
+    localStorage.setItem(THEME_KEY, t);
+    document.querySelectorAll("[data-theme-toggle]").forEach(function(btn){
+      const isDark = t === "dark";
+      btn.setAttribute("aria-pressed", isDark ? "true" : "false");
+      btn.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+      btn.title = isDark ? "Light mode" : "Dark mode";
+      const icon = btn.querySelector(".theme-icon");
+      const label = btn.querySelector(".theme-label");
+      if (icon) icon.textContent = isDark ? "☀" : "☾";
+      if (label) label.textContent = isDark ? "Light" : "Dark";
+    });
+  }
+
+  applyTheme(getTheme());
 
   function track(name, extra){
     const payload = Object.assign({
@@ -92,6 +117,7 @@
           '<a data-nav href="contact.html">Contact</a>' +
         '</nav>' +
         '<div class="cta">' +
+          '<button type="button" class="theme-toggle" data-theme-toggle aria-pressed="true" aria-label="Switch to light mode" title="Light mode"><span class="theme-icon" aria-hidden="true">☀</span><span class="theme-label">Light</span></button>' +
           '<a class="btn primary" data-store="bapi" data-campaign="website_nav">Get BAPI Guard</a>' +
         '</div>' +
       '</div>'
@@ -153,6 +179,17 @@
     if (header) header.innerHTML = navHtml();
     const footer = document.querySelector("footer.footer");
     if (footer) footer.innerHTML = footerHtml();
+    applyTheme(getTheme());
+  }
+
+  function bindThemeToggle(){
+    document.querySelectorAll("[data-theme-toggle]").forEach(function(btn){
+      btn.addEventListener("click", function(){
+        const next = getTheme() === "dark" ? "light" : "dark";
+        applyTheme(next);
+        track("click_theme_toggle", { theme: next });
+      });
+    });
   }
 
   function bindStoreButtons(){
@@ -447,6 +484,7 @@
   }
 
   applyChrome();
+  bindThemeToggle();
   initPixel();
   markNav();
   mobileNav();
