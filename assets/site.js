@@ -82,7 +82,7 @@
   function navHtml(){
     return (
       '<div class="nav-inner">' +
-        '<a class="brand" href="index.html">PLM AI Services<small>Manufacturing data tools · Worldwide</small></a>' +
+        '<a class="brand" href="index.html">PLM AI Services<small>Manufacturing data ecosystem · Worldwide</small></a>' +
         '<button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">Menu</button>' +
         '<nav class="nav-links" id="primary-nav" aria-label="Primary">' +
           '<a data-nav href="products.html">Products</a>' +
@@ -92,7 +92,7 @@
           '<a data-nav href="contact.html">Contact</a>' +
         '</nav>' +
         '<div class="cta">' +
-          '<a class="btn primary" href="contact.html#contact-form">Request Demo</a>' +
+          '<a class="btn primary" data-store="bapi" data-campaign="website_nav">Get BAPI Guard</a>' +
         '</div>' +
       '</div>'
     );
@@ -103,16 +103,16 @@
       '<div class="container">' +
         '<div>' +
           '<strong>PLM AI Services</strong>' +
-          '<p class="brand-blurb">BOM and ERP data tools for manufacturers worldwide—including the USA, India, Europe and other markets. Windows software for BOM compare, ERP migration validation and document revision control.</p>' +
+          '<p class="brand-blurb">Manufacturing data ecosystem for teams worldwide—including the USA, India, Europe and other markets. Windows apps on Microsoft Store for documents, BOMs, ERP validation and SAP file loads—with BAPI Guard as the flagship. Lean Consult on the App Store.</p>' +
           '<p class="brand-blurb">Sales &amp; support: use the <a href="contact.html#contact-form">demo request form</a>. We reply by email after you submit.</p>' +
         '</div>' +
         '<div>' +
           '<h2>Products</h2>' +
           '<ul>' +
+            '<li><a href="bapiload-guard.html">BAPI Guard</a></li>' +
             '<li><a href="bom-compare.html">BOM Compare Tool</a></li>' +
             '<li><a href="erp-migration-validator.html">ERP Migration Validator</a></li>' +
             '<li><a href="docrev-manager.html">DocRev Manager</a></li>' +
-            '<li><a href="bapiload-guard.html">BAPI Guard</a></li>' +
             '<li><a href="order-release-guard.html">Release Guard</a></li>' +
             '<li><a href="leanconsult-factory.html">Lean Consult</a></li>' +
           '</ul>' +
