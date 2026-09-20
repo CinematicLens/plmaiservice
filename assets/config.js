@@ -49,7 +49,19 @@ window.PLMOPS_CONFIG = {
       shortName: "Lean Consult",
       family: "lean",
       page: "leanconsult-factory.html",
-      problem: "Turn a workplace photo and short description into a cautious, measurable lean experiment — on device.",
+
+      painPoints: [
+        "Vague Kaizen ideas without a measurable trial",
+        "No keep/revert rule after one shift",
+        "Before/after results stay unstructured",
+        "Privacy concerns with cloud analysis"
+      ],
+      outcomes: [
+        "On-device one-shift experiment plan",
+        "Success metric and keep/revert rule",
+        "Before/after measurement rows",
+        "Optional PDF; no cloud analysis backend"
+      ],      problem: "Turn a workplace photo and short description into a cautious, measurable lean experiment — on device.",
       description: "LeanConsult Factory helps production supervisors and continuous-improvement leads capture a workplace condition, describe it by voice or text, and get a reversible one-shift trial plan generated privately on device.",
       storeUrl: "https://apps.apple.com/us/app/leanconsult-factory/id6794219819",
       storeReady: true,
@@ -91,7 +103,20 @@ window.PLMOPS_CONFIG = {
       name: "BOM Compare Tool",
       shortName: "BOM Compare",
       page: "bom-compare.html",
-      priority: 2,
+
+      problem: "Detect BOM differences quickly instead of comparing versions manually in Excel.",
+      painPoints: [
+        "Manual Source vs Target BOM checks in Excel",
+        "Missed quantity, plant or part differences",
+        "Unclear which columns were compared",
+        "Slow reviews before BOM release"
+      ],
+      outcomes: [
+        "Matched / Different / side-only filters",
+        "Side-by-side field values",
+        "Column mapping review",
+        "Local Windows processing"
+      ],      priority: 2,
       description: "Compare two Bills of Materials on Windows (CSV, Excel, JSON; PLMXML on Source). Validate BOMs locally. Available on Microsoft Store.",
       storeUrl: "https://apps.microsoft.com/detail/9nq1k3vh33kv?hl=en-US&gl=IN",
       storeReady: true,
@@ -115,7 +140,7 @@ window.PLMOPS_CONFIG = {
         "Column mapping review — see what was compared vs ignored",
         "Search, column picker, row detail and ignored-item review",
         "Optional mapping presets / Mapping Manager when licensed",
-        "CSV or PDF export when entitled under your B2B licence",
+        "CSV or PDF export when entitled under your Store licence",
         "CSV, Excel (.xlsx), JSON; PLMXML on Source; max 50 MB per file",
         "Runs locally on Windows — BOM files are not uploaded to our servers"
       ],
@@ -136,7 +161,20 @@ window.PLMOPS_CONFIG = {
       shortName: "DocRev Manager",
       family: "plm",
       page: "docrev-manager.html",
-      priority: 4,
+
+      problem: "Improve drawing and revision control so outdated documents do not reach the shop floor.",
+      painPoints: [
+        "Wrong drawing revision on the shop floor",
+        "Shared-folder chaos without ownership",
+        "No clear revision lifecycle",
+        "Hard to issue controlled document packs"
+      ],
+      outcomes: [
+        "Automatic numbering and current revision",
+        "Draft / Review / Released / Obsolete statuses",
+        "Local vault with audit trail",
+        "Transmittals and shop-floor packets"
+      ],      priority: 4,
       description: "Control engineering documents, numbering and revisions in one Windows application built for small manufacturers, engineering offices and project teams.",
       storeUrl: "https://apps.microsoft.com/detail/9mxr3wlmq0g7?hl=en-US&gl=IN",
       storeReady: true,
@@ -179,7 +217,20 @@ window.PLMOPS_CONFIG = {
       shortName: "ERP Validator",
       family: "plm",
       page: "erp-migration-validator.html",
-      priority: 3,
+
+      problem: "Validate migration files before ERP upload to reduce Excel and data-entry errors.",
+      painPoints: [
+        "ERP imports failing after upload",
+        "Missing, duplicate or invalid values found too late",
+        "No reusable validation profiles",
+        "Source files overwritten during cleanup"
+      ],
+      outcomes: [
+        "Pre-upload CSV/XLSX checks",
+        "Audit report without overwriting source",
+        "Suggested fixes in the issue grid",
+        "Reusable JSON profiles"
+      ],      priority: 3,
       description: "Validate Excel and CSV migration files locally before an ERP import. Available on Microsoft Store.",
       storeUrl: "https://apps.microsoft.com/detail/9ppg63sqxcp6?hl=en-US&gl=IN",
       storeReady: true,
@@ -227,7 +278,23 @@ window.PLMOPS_CONFIG = {
       shortName: "BAPI Guard",
       family: "plm",
       page: "bapiload-guard.html",
-      priority: 1,
+
+      painPoints: [
+        "Rekeying or blind Excel posts into SAP",
+        "Errors found only after SAP posting / failed loads",
+        "Custom ABAP or one-off scripts for every mass load",
+        "Unclear what was created, changed or left unchecked",
+        "Risky silent retries after timeouts",
+        "Uncontrolled remote-function exposure on shared landscapes"
+      ],
+      outcomes: [
+        "Validate-then-plan-then-load from Excel/CSV",
+        "Offline mapping checks before any SAP call",
+        "Declarative JSON mapping — no scripts for mapped loads",
+        "Create / Change / Skip plan with ready-to-load counts",
+        "Allowlisted remote functions only; no direct table writes",
+        "Read-back: Verified / Discrepant / Ambiguous / Not Checked"
+      ],      priority: 1,
       statusLabel: "Microsoft Store · Featured",
       statusClass: "store",
       problem: "Validate Excel/CSV manufacturing data offline, then load through customer-authorized SAP remote functions.",
@@ -248,14 +315,16 @@ window.PLMOPS_CONFIG = {
       campaignPage: "website_product_page",
       campaignFacebook: "facebook_bapiload",
       benefits: [
-        "Offline Excel/CSV validation before any SAP network call",
-        "Declarative JSON column mapping (no scripts)",
-        "Transparent Create / Change / Skip execution plan",
+        "Validate Excel/CSV offline before any SAP network call",
+        "Work from familiar spreadsheets instead of rekeying SAP screens",
+        "Declarative JSON column mapping (no ABAP / no scripts for mapped loads)",
+        "Transparent Create / Change / Skip plan and ready-to-load counts",
         "Guided packs: manufacturing, commercial, PM and documents",
         "Sales Order and master-data load workflows",
         "Submit only customer-allowlisted remote-enabled functions",
+        "Never writes SAP tables directly; connector DLLs customer-supplied",
         "Plan hash binds approval; batch checkpoints",
-        "Read-back classification: Verified, Discrepant, Ambiguous, Not Checked",
+        "Read-back: Verified, Discrepant, Ambiguous, Not Checked",
         "Timeouts treated as unknown — no silent risky retries",
         "Independent product — not affiliated with SAP SE; sapnco.dll not included"
       ],
@@ -275,7 +344,19 @@ window.PLMOPS_CONFIG = {
       shortName: "Release Guard",
       family: "plm",
       page: "order-release-guard.html",
-      priority: 5,
+
+      painPoints: [
+        "PO does not match accepted quotation",
+        "Revision / qty / price / delivery gaps at release",
+        "No evidence trail for keep/hold",
+        "Pressure to release without structured review"
+      ],
+      outcomes: [
+        "RFQ / quote / PO comparison with severity",
+        "Source-linked discrepancies",
+        "SHA-256 evidence inventory",
+        "Human approval still required"
+      ],      priority: 5,
       statusLabel: "Microsoft Store",
       statusClass: "store",
       problem: "Catch revision, quantity, price, material and delivery differences between RFQ, quote and PO before release.",

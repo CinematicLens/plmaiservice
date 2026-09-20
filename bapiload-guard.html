@@ -17,7 +17,7 @@
   <meta name="twitter:title" content="BAPI Guard | Manufacturing Data Ecosystem Flagship"/>
   <meta name="twitter:description" content="Flagship SAP file-load workstation for manufacturers worldwide. Not affiliated with SAP SE."/>
   <meta name="twitter:image" content="https://plmaiservice.com/assets/img/bapiload-guard-sales.png"/>
-  <link rel="stylesheet" href="assets/styles.css?v=20260919theme"/>
+  <link rel="stylesheet" href="assets/styles.css?v=20260920ben"/>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-77043KQ3MP"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-77043KQ3MP');</script>
   <script type="application/ld+json">
@@ -95,6 +95,70 @@
       <li>Teamcenter / PLM connectors are out of scope for the current release</li>
     </ul>
 
+    <h2 class="section-title">Pain points solved</h2>
+    <p class="section-sub">Familiar Excel-to-SAP load problems—addressed with a validate-then-plan-then-load workflow on Windows.</p>
+    <div class="pain-grid" style="margin-bottom:22px">
+      <article class="pain-card">
+        <p class="pain-kicker">Pain</p>
+        <h3>Rekeying and blind spreadsheet posts</h3>
+        <p class="pain-copy">Teams copy Excel into SAP screens or fire remote calls without seeing what will Create, Change or Skip.</p>
+        <p class="benefit-kicker">BAPI Guard benefit</p>
+        <p class="benefit-copy">Load from Excel/CSV with a transparent Create / Change / Skip plan before any live submit.</p>
+      </article>
+      <article class="pain-card">
+        <p class="pain-kicker">Pain</p>
+        <h3>Errors found only after SAP posting</h3>
+        <p class="pain-copy">Missing fields, bad mapping and duplicates surface as failed tickets and cleanup work.</p>
+        <p class="benefit-kicker">BAPI Guard benefit</p>
+        <p class="benefit-copy">Offline Excel/CSV validation and column mapping on the PC before any SAP network call.</p>
+      </article>
+      <article class="pain-card">
+        <p class="pain-kicker">Pain</p>
+        <h3>Custom ABAP or one-off scripts for every load</h3>
+        <p class="pain-copy">Waiting on IT for mass-upload tools slows master-data and manufacturing projects.</p>
+        <p class="benefit-kicker">BAPI Guard benefit</p>
+        <p class="benefit-copy">Declarative JSON column mapping and guided packs—no scripts required for the mapped load path.</p>
+      </article>
+      <article class="pain-card">
+        <p class="pain-kicker">Pain</p>
+        <h3>Unclear what actually landed in SAP</h3>
+        <p class="pain-copy">After a mass run, teams struggle to prove which rows were created, changed or left unchecked.</p>
+        <p class="benefit-kicker">BAPI Guard benefit</p>
+        <p class="benefit-copy">Read-back classification: Verified, Discrepant, Ambiguous or Not Checked.</p>
+      </article>
+      <article class="pain-card">
+        <p class="pain-kicker">Pain</p>
+        <h3>Risky retries after timeouts</h3>
+        <p class="pain-copy">A timed-out call may already have committed—blind retry can duplicate work.</p>
+        <p class="benefit-kicker">BAPI Guard benefit</p>
+        <p class="benefit-copy">Timeouts treated as unknown; plan hash and batch checkpoints bind what was approved.</p>
+      </article>
+      <article class="pain-card">
+        <p class="pain-kicker">Pain</p>
+        <h3>Uncontrolled remote-function exposure</h3>
+        <p class="pain-copy">Broad automation can call more than the business intended on a shared landscape.</p>
+        <p class="benefit-kicker">BAPI Guard benefit</p>
+        <p class="benefit-copy">Submit only customer-allowlisted remote-enabled functions—never write SAP tables directly.</p>
+      </article>
+    </div>
+
+    <section class="benefit-section" aria-labelledby="benefits-heading">
+      <h2 id="benefits-heading" class="section-title">Benefits</h2>
+      <div class="time-save-banner">
+        <p class="time-save-stat">Save up to 90% of the time</p>
+        <p class="time-save-copy">Save up to 90% of the time spent rekeying or blind-checking Excel before SAP loads.</p>
+        <p class="time-save-note">Results vary by process, data volume and team workflow.</p>
+      </div>
+      <div class="grid benefit-cards">
+      <div class="card span-4"><h3>Validate before you load</h3><p>Offline Excel/CSV checks before any SAP network call.</p></div>
+      <div class="card span-4"><h3>Stay in spreadsheets</h3><p>Map columns once — stop rekeying into SAP screens.</p></div>
+      <div class="card span-4"><h3>Plan before submit</h3><p>See Create / Change / Skip counts before a live run.</p></div>
+      <div class="card span-4"><h3>Prove what landed</h3><p>Read-back: Verified, Discrepant, Ambiguous or Not Checked.</p></div>
+      <div class="card span-4"><h3>Govern the call path</h3><p>Customer-allowlisted remote functions only — no direct table writes.</p></div>
+      <div class="card span-4"><h3>Safer retries</h3><p>Timeouts treated as unknown; plan hash and batch checkpoints.</p></div>
+      </div>
+    </section>
+
     <h2 class="section-title">Who it helps</h2>
     <ul class="list">
       <li>Companies running SAP ECC or S/4HANA with master-data and manufacturing load projects</li>
@@ -127,7 +191,7 @@
   </main>
   <footer class="footer"></footer>
 
-  <script src="assets/config.js?v=20260919theme"></script>
-  <script src="assets/site.js?v=20260919theme"></script>
+  <script src="assets/config.js?v=20260920ben"></script>
+  <script src="assets/site.js?v=20260920ben"></script>
 </body>
 </html>
